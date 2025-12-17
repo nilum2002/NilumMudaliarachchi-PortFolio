@@ -1,26 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Nata+Sans:wght@100..900&family=Sekuya&display=swap');
+
 @import "tailwindcss";
 
+@import "bootstrap-icons/font/bootstrap-icons.css";
+@import "remixicon/fonts/remixicon.css";
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --prim-color: #0ea5ea;
+  --prim-light: #a9baf989;
+  --body-color: #0f172a;
+  --bg-color: #131c31;
+  --light-boarder: rgba(131, 131, 131, 0.3);
+
+  --white: #fff;
+  --black: #000;
+  --text-light : rgb(170, 170, 170);
+  --text: #fff;
+
+  --font-geist-sans: "Geist", sans-serif;
+  --font-geist-mono: "Geist Mono", monospace;
+
+  /* Additional Google Fonts */
+  --font-bbh-bartle: "BBH Bartle", serif;
+  --font-nata-sans: "Nata Sans", sans-serif;
+  --font-sekuya: "Sekuya", cursive;
+
+  --transition-regular:0.3s;
+  --transition-slow: 0.6s;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html.light{
+  --prime-color: #00a2ff;
+  --prime-light: #dbeafe;
+  --body-color: #e8edf1;
+  --bg-color: #ffffff;
+  --light-border: #0ea5ea;
+  --white: #000;
+  --black: #fff;
+  --text-light : rgb(0, 0, 0);
+  --text: #344261;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.font-geist-sans{
+  font-family: var(--font-geist-sans);
+}
+.font-geist-mono{
+  font-family: var(--font-geist-mono);
+}
+.font-bbh-bartle{
+  font-family: var(--font-bbh-bartle);
+}
+.font-nata-sans{
+  font-family: var(--font-nata-sans);
+}
+.font-sekuya{
+  font-family: var(--font-sekuya);
+}
+body, 
+html,
+*{
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+*{
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: var(--body-color);
+  color: var(--white);
+  overflow-x: hidden;
+
 }
