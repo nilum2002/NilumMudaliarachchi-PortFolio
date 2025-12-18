@@ -72,3 +72,30 @@ body{
   overflow-x: hidden;
 
 }
+
+/* NavBar */
+
+
+.menu-link a{
+  font-weight: 600;
+  transition: var(--transition-regular);
+  color: var(--text-light);
+}
+
+.menu-link{
+  font-size: 1rem;
+  color: var(--text-light);
+  letter-spacing: 1px;
+}
+
+.btn{
+  background: var(--prim-color);
+  background: linear-gradient(90deg, rgb(14, 165, 234), rgb(11, 209, 209) 51%, rgb(14, 165, 234)) var(--x, 0) / 250%;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.btn:hover{
+  --x:150% !important;
+  transition: 0.5s;
+}
