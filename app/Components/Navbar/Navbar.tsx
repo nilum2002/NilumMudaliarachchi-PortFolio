@@ -35,69 +35,69 @@ const navLinks: NavLink[] = [
   },
   { label: "About", href: "/app/UI-Components/pages/About" },
   { label: "Contact", href: "/app/UI-Components/pages/Contact" },
-
 ];
 
 export default function Navbar() {
-    const [mobileMenuOpen, setmobileMenuOpen] = useState(false);
-    const [openDropDowns, setOpenDropdowns] = useState<Record<string, boolean>>({});
-    const [isFixed, setisFixed] = useState(false);
-    const [darkMod, setDarkMode] = useState(true);
+  const [mobileMenuOpen, setmobileMenuOpen] = useState(false);
+  const [openDropDowns, setOpenDropdowns] = useState<Record<string, boolean>>(
+    {}
+  );
+  const [isFixed, setisFixed] = useState(false);
+  const [darkMod, setDarkMode] = useState(true);
 
-    const toggleTheme = () => {
-        const newMode = !darkMod;
-        setDarkMode(newMode);
+  const toggleTheme = () => {
+    const newMode = !darkMod;
+    setDarkMode(newMode);
 
-        if (newMode){
-            document.documentElement.classList.remove("light");
-            localStorage.setItem("theme", "dark");
-        } else {
-            document.documentElement.classList.add("light");
-            localStorage.setItem("theme", "light");
-        }
+    if (newMode) {
+      document.documentElement.classList.remove("light");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.add("light");
+      localStorage.setItem("theme", "light");
     }
+  };
 
-    useEffect(() => {
-        const savedTheme = localStorage.getItem("theme");
-        if (savedTheme === "light"){
-            setDarkMode(false);
-            document.documentElement.classList.add("light");
-
-        }else{
-            document.documentElement.classList.remove("light");
-        }
-    });
-
-    useEffect(() => {
-        const handleScroll = () => setisFixed(window.scrollY > 50);
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-
-    const toggleDropdown = (label: string) =>{
-        setOpenDropdowns((prev) => (prev[label] ? {} : {[label]:true}));
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "light") {
+      setDarkMode(false);
+      document.documentElement.classList.add("light");
+    } else {
+      document.documentElement.classList.remove("light");
     }
+  });
+
+  useEffect(() => {
+    const handleScroll = () => setisFixed(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const toggleDropdown = (label: string) => {
+    setOpenDropdowns((prev) => (prev[label] ? {} : { [label]: true }));
+  };
 
   return (
     <>
       <div
-        className={`w-full transition-all duration-500 ${
+        className={`w-full max-w-full transition-all duration-500 ${
           isFixed
-            ? "fixed top-0 left-0 -z-100 bg-[var(--bg-color)] backdrop-blur-lg"
+            ? "fixed top-0 left-0 z-50 bg-(--bg-color) backdrop-blur-lg"
             : ""
         }`}
       >
-        <div className="flex items-center justify-between px-[8%] lg:px-[16%] py-5">
+        <div className="flex items-center justify-between px-[8%] lg:px-[16%] py-5 max-w-full">
           {/*logo*/}
           <Link
             href="/"
-            className="text-3xl font-bold font-geist-mono text-[var(--prim-color)]"
+            className="text-3xl font-bold font-geist-mono text-(--prim-color) lg:shrink-0"
           >
-            Nilum <span className="text-[var(--white)]"> Mudaliarachchi</span>
+            Nilum <span className="text-(--white)"> Mudaliarachchi</span>
           </Link>
 
           {/*Desktop Nav */}
-          <nav className="hidden lg:flex space-x-6 menu-link relative ">
+          <nav className="hidden lg:flex space-x-6 menu-link relative lg:flex-1 lg:justify-center lg:mx-8">
             {navLinks.map((link) =>
               link.dropdown ? (
                 <div key={link.label} className="relative group z-50">
@@ -112,7 +112,7 @@ export default function Navbar() {
                       <Link
                         key={item.label}
                         href={item.href}
-                        className="block px-4 py-2 rounded-md hover:text-[var(--prim-color)] transition-all whitespace-nowrap"
+                        className="block px-4 py-2 rounded-md hover:text-(--prim-color) transition-all whitespace-nowrap"
                       >
                         <i className="bi bi-gear text-xs"></i> {item.label}
                       </Link>
@@ -127,10 +127,10 @@ export default function Navbar() {
             )}
           </nav>
           {/*right section*/}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 lg:shrink-0">
             <div
               onClick={toggleTheme}
-              className="mode flex items-center justify-center cursor-pointer w-10 h-10 bg-[var(--text-light)] rounded-full relative overflow-hidden"
+              className="mode flex items-center justify-center cursor-pointer w-10 h-10 bg-(--text-light) rounded-full relative overflow-hidden"
             >
               <i
                 className={`bi bi-brightness-high-fill text-white text-xl absolute transition-all duration-700 ease-in-out ${
@@ -163,9 +163,9 @@ export default function Navbar() {
         {/* Mobile Menu */}
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden bg-[var(--bg-color)] border-t border-gray-700 overflow-hidden transition-all duration-500 ${
+          className={`lg:hidden bg-(--bg-color) border-t border-gray-700 overflow-hidden transition-all duration-500 ${
             mobileMenuOpen
-              ? "max-h-[700px] opacity-100 py-4"
+              ? "max-h-175 opacity-100 py-4"
               : "max-h-0 opacity-0 py-0"
           }`}
         >
@@ -176,7 +176,7 @@ export default function Navbar() {
                   <button
                     type="button"
                     onClick={() => toggleDropdown(link.label)}
-                    className="w-full flex items-center justify-between px-4 py-3 rounded-lg border border-gray-50/10 bg-[var(--bg-color)] hover:border-[var(--prim-color)] transition"
+                    className="w-full flex items-center justify-between px-4 py-3 rounded-lg border border-gray-50/10 bg-(--bg-color) hover:border-(--prim-color) transition"
                   >
                     <span className="menu-links">{link.label}</span>
                     <i
@@ -196,7 +196,7 @@ export default function Navbar() {
                       <Link
                         key={item.label}
                         href={item.href}
-                        className="block px-3 py-2 rounded-md hover:text-[var(--prim-color)] transition-all"
+                        className="block px-3 py-2 rounded-md hover:text-(--prim-color) transition-all"
                         role="menuitem"
                       >
                         <i className="bi bi-gear text-xs"></i> {item.label}
@@ -208,7 +208,7 @@ export default function Navbar() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="w-full flex items-center justify-between px-4 py-3 rounded-lg border border-gray-50/10 bg-[var(--bg-color)] hover:border-[var(--prim-color)] transition"
+                  className="w-full flex items-center justify-between px-4 py-3 rounded-lg border border-gray-50/10 bg-(--bg-color) hover:border-(--prim-color) transition"
                 >
                   <span className="menu-links">{link.label}</span>
                 </Link>

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Nata+Sans:wght@100..900&family=Sekuya&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geom:ital,wght@0,300..900;1,300..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import "tailwindcss";
 
@@ -23,7 +24,9 @@
   /* Additional Google Fonts */
   --font-bbh-bartle: "BBH Bartle", serif;
   --font-nata-sans: "Nata Sans", sans-serif;
-  --font-sekuya: "Sekuya", cursive;
+  --font-unbounded: "Unbounded", sans-serif;
+  --font-geom: "Geom", sans-serif;
+  --font-noto-sans: "Noto Sans", sans-serif;
 
   --transition-regular:0.3s;
   --transition-slow: 0.6s;
@@ -56,6 +59,22 @@ html.light{
 .font-sekuya{
   font-family: var(--font-sekuya);
 }
+.font-unbounded{
+  font-family: var(--font-unbounded);
+}
+.font-geom{
+  font-family: var(--font-geom);
+}
+.font-noto-sans{
+  font-family: var(--font-noto-sans);
+}
+
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 body, 
 html,
 *{
@@ -69,12 +88,10 @@ html,
 body{
   background-color: var(--body-color);
   color: var(--white);
-  overflow-x: hidden;
-
+  min-height: 200vh;
 }
 
 /* NavBar */
-
 
 .menu-link a{
   font-weight: 600;
@@ -98,4 +115,129 @@ body{
 .btn:hover{
   --x:150% !important;
   transition: 0.5s;
+}
+
+.hero{
+  position: relative;
+}
+.hero-header{
+  height: 100vh;
+}
+.hero::after{
+  content: "";
+  position: absolute;
+  top:0;
+  left: -25%;
+  width: 70%;
+  height: 85%;
+  background-image: url(../public/Hero-bg-shape1.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+
+}
+.hero::before{
+  content: "";
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 700px;
+  background-image: url(../public/Hero-bg-shape1.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+
+}
+
+.hero-elm{
+  z-index: -1;
+}
+
+.hero-elm-1{
+  position: absolute;
+  top: 50%;
+  left: -15%;
+  animation: Anim-hero-1 6s infinite linear;
+}
+.hero-elm-2{
+  position: absolute;
+  top: 20%;
+  right:0;
+  animation: Anim-hero-2 3s infinite linear;
+}
+
+.hero-elm-3{
+  position: absolute;
+  top: 80%;
+  left: -2%;
+  animation: Anim-hero-3 3s infinite forwards linear;
+}
+
+.hero-elm-4{
+  position: absolute;
+  top: 60%;
+  right: -3%;
+  animation: Anim-hero-4 3s infinite forwards linear;
+}
+
+@keyframes Anim-hero-1  {
+  0%{
+    transform: translate(0) rotate(0);
+  }
+  20%{
+    transform: translate(73px, -1px) rotate(36deg);
+  }
+  40%{
+    transform: translate(141px, 72px) rotate(72deg);
+  }
+  60%{
+    transform: translate(83px, 122px) rotate(108deg);
+  }
+  80%{
+    transform: translate(-40px, 72px) rotate(144deg);
+  }
+  100%{
+    transform: translate(0px) rotate(0deg);
+  }
+}
+
+@keyframes Anim-hero-2 {
+  0%{
+    transform: translateY(-50px);
+  }
+  50%{
+    transform: translateY(0px);
+  }
+  100%{
+    transform: translate(-50px) ;
+  }
+  
+}
+
+@keyframes Anim-hero-3 {
+  0%{
+    transform: scale(1.2);
+  }
+  50%{
+    transform: scale(0.7);
+  }
+  100%{
+    transform: translate(1.2) ;
+  }
+  
+}
+
+@keyframes Anim-hero-4 {
+  0%{
+    transform: scale(1.2);
+  }
+  50%{
+    transform: scale(0.7);
+  }
+  100%{
+    transform: translate(1.2) ;
+  }
+  
 }
