@@ -24,6 +24,9 @@ const BBHbartle = BBH_Sans_Bartle({
 export const metadata: Metadata = {
   title: "Nilum Mudaliarachchi",
   description: "Nilums Portfolio",
+  icons: {
+    icon: "/robot-svgrepo-com.svg",
+  },
 };
 
 export default function RootLayout({

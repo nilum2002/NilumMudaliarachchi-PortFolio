@@ -9,10 +9,53 @@ import Heroelm2 from "@/public/Hero-elm2.svg";
 import Heroelm3 from "@/public/Hero-elm3.svg";
 import Heroelm4 from "@/public/Hero-elm4.svg";
 
+import resentProject01 from "@/public/RecentProject01.jpg";
+
+import {Swiper, SwiperSlide} from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+
+const RecentProjects = [
+  {
+    id: "1",
+    title: "Automated Restaurant Feedback Agent",
+    subtitles: "New Test",
+    image: resentProject01,
+    gitHubLink:
+      "https://github.com/nilum2002/Automated-Restaurant-Feedback-Agent-SteamNoodles",
+  },
+  {
+    id: "2",
+    title: "Automated Restaurant Feedback Agent",
+    subtitles: "New Test",
+    image: resentProject01,
+    gitHubLink:
+      "https://github.com/nilum2002/Automated-Restaurant-Feedback-Agent-SteamNoodles",
+  },
+  {
+    id: "3",
+    title: "Automated Restaurant Feedback Agent",
+    subtitles: "New Test",
+    image: resentProject01,
+    gitHubLink:
+      "https://github.com/nilum2002/Automated-Restaurant-Feedback-Agent-SteamNoodles",
+  },
+  {
+    id: "4",
+    title: "Automated Restaurant Feedback Agent",
+    subtitles: "New Test",
+    image: resentProject01,
+    gitHubLink:
+      "https://github.com/nilum2002/Automated-Restaurant-Feedback-Agent-SteamNoodles",
+  },
+];
+
+
 export default function Hero() {
   return (
     <div>
-      <div className="hero hero-header px-[8%] lg:px-[16%] pt-10 text-(--white)">
+      <div className="hero hero-header px-[8%] lg:px-[16%] pt-10 text-[var(--white)]">
         {/*Hero Section*/}
         <div className="w-full flex flex-col lg:flex-row gap-5 justify-between items-center">
           <div className="w-full lg:w-1/2 lg:-mt-8">
@@ -68,9 +111,60 @@ export default function Hero() {
           </div>
         </div>
         {/*Resent projects */}
-        <div className="flex flex-col lg:flex-row justify-between gap-5 z-10 p-5 round-md border-[var(--prim-light)] bg-[var(--bg-color)] relative ">
+        <div className="flex flex-col lg:flex-row justify-between gap-5 z-10 p-5 rounded-md border border-[var(--prim-light)] bg-[var(--bg-color)] relative">
           <div className="w-full lg:w-1/1 relative">
-            <h2 className="text-[var(--text)]"> </h2>
+            <h2 className="text-[var(--text)] font-mono text-xl font-bold typing">
+              Recent Projects.
+            </h2>
+            <p className="text-[var(--text-light)]">See My recent Projects</p>
+            <div className="flex gap-3 mt-4">
+              <div className="swiper-button-next hero-swiper-next swiper-btn w-8 h-8 bg-[var(--prim-light)] hover:bg-[var(--prim-color)]  rounded-full flex items-center justify-center cursor-pointer text-white">
+                <i className="bi bi-arrow-right"></i>
+              </div>
+              <div className="swiper-button-prev hero-swiper-prev swiper-btn w-8 h-8 bg-[var(--prim-light)] hover:bg-[var(--prim-color)] rounded-full flex items-center justify-center cursor-pointer text-white">
+                <i className="bi bi-arrow-left"></i>
+              </div>
+            </div>
+          </div>
+
+          <div className="w-full lg:w-[80%] hero-swiper">
+            <Swiper
+              modules={[Autoplay, Navigation]}
+              navigation={{
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              }}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              slidesPerView={4}
+              spaceBetween={20}
+              loop={true}
+              breakpoints={{
+                1280: { slidesPerView: 3, spaceBetween: 28 },
+                1024: { slidesPerView: 2, spaceBetween: 24 },
+                768: { slidesPerView: 2, spaceBetween: 20 },
+                0: { slidesPerView: 1.1, spaceBetween: 16 },
+              }}
+              className="mt-5"
+            >
+              {RecentProjects.map((topic) => (
+                <SwiperSlide key={topic.id}>
+                  <Link href="/UI-Components/RecentProjects" className="block">
+                    <div className="relative hot-topic-card cursor-pointer">
+                      <Image
+                        src={topic.image}
+                        alt={topic.title}
+                        width={350}
+                        height={400}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </Link>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </div>

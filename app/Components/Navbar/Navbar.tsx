@@ -93,7 +93,7 @@ export default function Navbar() {
             href="/"
             className="text-3xl font-bold font-geist-mono text-[var(--prim-color)] lg:shrink-0"
           >
-            Nilum <span className="text-[var(--white)]">M.</span>
+            Nilum <span className="text-[var(--white)] hidden md:inline">Mudaliarachchi</span><span className="text-[var(--white)] inline md:hidden">M.</span>
           </Link>
 
           {/*Desktop Nav */}
@@ -160,7 +160,7 @@ export default function Navbar() {
             </button>
           </div>
         </div>
-        {/* Mobile Menu */}
+        
         {/* Mobile Menu */}
         <div
           className={`lg:hidden bg-[var(--bg-color)] border-t border-gray-700 transition-all duration-500 ease-in-out ${
