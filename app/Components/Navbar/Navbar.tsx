@@ -163,22 +163,24 @@ export default function Navbar() {
         {/* Mobile Menu */}
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden bg-(--bg-color) border-t border-gray-700 overflow-hidden transition-all duration-500 ${
+          className={`lg:hidden bg-(--bg-color) border-t border-gray-700 transition-all duration-500 ease-in-out ${
             mobileMenuOpen
-              ? "max-h-175 opacity-100 py-4"
-              : "max-h-0 opacity-0 py-0"
+              ? "max-h-screen opacity-100 py-4 overflow-y-auto"
+              : "max-h-0 opacity-0 py-0 overflow-hidden"
           }`}
         >
-          <div className="px-[8%] space-y-3">
+          <div className="px-[4%] sm:px-[6%] md:px-[8%] space-y-3">
             {navLinks.map((link) =>
               link.dropdown ? (
                 <div key={link.label} className="z-50">
                   <button
                     type="button"
                     onClick={() => toggleDropdown(link.label)}
-                    className="w-full flex items-center justify-between px-4 py-3 rounded-lg border border-gray-50/10 bg-(--bg-color) hover:border-(--prim-color) transition"
+                    className="w-full text-left flex items-center justify-between px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-50/10 bg-(--bg-color) hover:border-(--prim-color) transition active:scale-98"
                   >
-                    <span className="menu-links">{link.label}</span>
+                    <span className="menu-links text-sm sm:text-base">
+                      {link.label}
+                    </span>
                     <i
                       className={`ri-arrow-down-s-line transition-transform duration-200 ${
                         openDropDowns[link.label] ? "rotate-180" : "rotate-0"
@@ -187,8 +189,8 @@ export default function Navbar() {
                   </button>
 
                   <div
-                    className={`mt-2 pl-4 flex flex-col gap-2 ${
-                      openDropDowns[link.label] ? "block" : "hidden"
+                    className={`mt-2 pl-2 sm:pl-4 flex-col gap-2 transition-all duration-300 ${
+                      openDropDowns[link.label] ? "flex" : "hidden"
                     }`}
                     role="menu"
                   >
@@ -196,7 +198,7 @@ export default function Navbar() {
                       <Link
                         key={item.label}
                         href={item.href}
-                        className="block px-3 py-2 rounded-md hover:text-(--prim-color) transition-all"
+                        className="block px-2 sm:px-3 py-2 text-sm sm:text-base rounded-md hover:text-(--prim-color) hover:bg-gray-50/5 transition-all"
                         role="menuitem"
                       >
                         <i className="bi bi-gear text-xs"></i> {item.label}
@@ -208,9 +210,11 @@ export default function Navbar() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="w-full flex items-center justify-between px-4 py-3 rounded-lg border border-gray-50/10 bg-(--bg-color) hover:border-(--prim-color) transition"
+                  className="w-full flex items-center justify-between px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-50/10 bg-(--bg-color) hover:border-(--prim-color) transition"
                 >
-                  <span className="menu-links">{link.label}</span>
+                  <span className="menu-links text-sm sm:text-base">
+                    {link.label}
+                  </span>
                 </Link>
               )
             )}
