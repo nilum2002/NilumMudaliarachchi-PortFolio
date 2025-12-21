@@ -16,13 +16,13 @@ export default function Hero() {
         {/*Hero Section*/}
         <div className="w-full flex flex-col lg:flex-row gap-5 justify-between items-center">
           <div className="w-full lg:w-1/2 lg:-mt-8">
-            <span className="text-(--text-light) font-unbounded text-[15px] font-bold animate-bounce inline-block">
+            <span className="text-[var(--text-light)] font-unbounded text-[15px] font-bold animate-bounce inline-block">
               Hey There!
             </span>
-            <h1 className="text-(--text) font-geist-sans text-7xl font-bold my-6">
+            <h1 className="text-[var(--text)] font-geist-sans text-4xl sm:text-5xl lg:text-7xl font-bold my-6">
               I'm Nilum Mudaliarachchi.
             </h1>
-            <p className="font-geom text-[15px] font-light text-(--text-light) ">
+            <p className="font-geom text-[15px] font-light text-[var(--text-light)]">
               I build intelligent and impactful solutions by combining software,
               hardware, and modern technologies. Every algorithm, system, and
               design choice I make serves a purpose — to create efficient,
@@ -68,10 +68,10 @@ export default function Hero() {
           </div>
         </div>
         {/*Resent projects */}
-        <div className="flex flex-col lg:flex-row justify-between gap-5 z-10 p-5 round-md border-(--prim-light) bg-(--bg-color) relative ">
-            <div className="w-full lg:w-1/1 relative"> 
-                <h2 className="text-(--text)"> </h2>
-            </div>
+        <div className="flex flex-col lg:flex-row justify-between gap-5 z-10 p-5 round-md border-[var(--prim-light)] bg-[var(--bg-color)] relative ">
+          <div className="w-full lg:w-1/1 relative">
+            <h2 className="text-[var(--text)]"> </h2>
+          </div>
         </div>
       </div>
     </div>

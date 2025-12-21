@@ -83,7 +83,7 @@ export default function Navbar() {
       <div
         className={`w-full max-w-full transition-all duration-500 ${
           isFixed
-            ? "fixed top-0 left-0 z-50 bg-(--bg-color) backdrop-blur-lg"
+            ? "fixed top-0 left-0 z-50 bg-[var(--bg-color)] backdrop-blur-lg"
             : ""
         }`}
       >
@@ -91,9 +91,9 @@ export default function Navbar() {
           {/*logo*/}
           <Link
             href="/"
-            className="text-3xl font-bold font-geist-mono text-(--prim-color) lg:shrink-0"
+            className="text-3xl font-bold font-geist-mono text-[var(--prim-color)] lg:shrink-0"
           >
-            Nilum <span className="text-(--white)"> Mudaliarachchi</span>
+            Nilum <span className="text-[var(--white)]">M.</span>
           </Link>
 
           {/*Desktop Nav */}
@@ -112,7 +112,7 @@ export default function Navbar() {
                       <Link
                         key={item.label}
                         href={item.href}
-                        className="block px-4 py-2 rounded-md hover:text-(--prim-color) transition-all whitespace-nowrap"
+                        className="block px-4 py-2 rounded-md hover:text-[var(--prim-color)] transition-all whitespace-nowrap"
                       >
                         <i className="bi bi-gear text-xs"></i> {item.label}
                       </Link>
@@ -130,7 +130,7 @@ export default function Navbar() {
           <div className="flex items-center gap-4 lg:shrink-0">
             <div
               onClick={toggleTheme}
-              className="mode flex items-center justify-center cursor-pointer w-10 h-10 bg-(--text-light) rounded-full relative overflow-hidden"
+              className="mode flex items-center justify-center cursor-pointer w-10 h-10 bg-[var(--text-light)] rounded-full relative overflow-hidden"
             >
               <i
                 className={`bi bi-brightness-high-fill text-white text-xl absolute transition-all duration-700 ease-in-out ${
@@ -150,7 +150,7 @@ export default function Navbar() {
             </Link>
             <button
               onClick={() => setmobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden text-(--white) text-2xl"
+              className="lg:hidden text-[var(--white)] text-2xl"
             >
               <i
                 className={`ri-${
@@ -163,9 +163,9 @@ export default function Navbar() {
         {/* Mobile Menu */}
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden bg-(--bg-color) border-t border-gray-700 transition-all duration-500 ease-in-out ${
+          className={`lg:hidden bg-[var(--bg-color)] border-t border-gray-700 transition-all duration-500 ease-in-out ${
             mobileMenuOpen
-              ? "max-h-screen opacity-100 py-4 overflow-y-auto"
+              ? "max-h-[1000px] opacity-100 py-4 overflow-y-auto"
               : "max-h-0 opacity-0 py-0 overflow-hidden"
           }`}
         >
@@ -176,7 +176,7 @@ export default function Navbar() {
                   <button
                     type="button"
                     onClick={() => toggleDropdown(link.label)}
-                    className="w-full text-left flex items-center justify-between px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-50/10 bg-(--bg-color) hover:border-(--prim-color) transition active:scale-98"
+                    className="w-full text-left flex items-center justify-between px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-50/10 bg-[var(--bg-color)] hover:border-[var(--prim-color)] transition active:scale-98"
                   >
                     <span className="menu-links text-sm sm:text-base">
                       {link.label}
@@ -198,7 +198,7 @@ export default function Navbar() {
                       <Link
                         key={item.label}
                         href={item.href}
-                        className="block px-2 sm:px-3 py-2 text-sm sm:text-base rounded-md hover:text-(--prim-color) hover:bg-gray-50/5 transition-all"
+                        className="block px-2 sm:px-3 py-2 text-sm sm:text-base rounded-md hover:text-[var(--prim-color)] hover:bg-gray-50/5 transition-all"
                         role="menuitem"
                       >
                         <i className="bi bi-gear text-xs"></i> {item.label}
@@ -210,7 +210,7 @@ export default function Navbar() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="w-full flex items-center justify-between px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-50/10 bg-(--bg-color) hover:border-(--prim-color) transition"
+                  className="w-full flex items-center justify-between px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-50/10 bg-[var(--bg-color)] hover:border-[var(--prim-color)] transition"
                 >
                   <span className="menu-links text-sm sm:text-base">
                     {link.label}
