@@ -311,3 +311,72 @@ body{
     left: 15% !important;
   }
 }
+
+.hot-topic-info{
+  z-index:2;
+}
+.hot-topic-card:after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../public/Hot-topic-bg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.hot-topic-info{
+  transition: var(--transition-regular);
+}
+.hot-topic-card:hover .hot-topic-info{
+  transform: translateY(-10px) translateX(10px) scale(1.05);
+
+}
+
+/* Neon overlays for recent project cards */
+.neon-card{
+  background: linear-gradient(135deg, rgba(19, 28, 49, 0.55), rgba(19, 28, 49, 0.25));
+  border: 1px solid rgba(14,165,234,0.35);
+  box-shadow:
+    0 0 16px rgba(73, 152, 189, 0.18),
+    0 0 36px rgba(110, 175, 205, 0.15),
+    inset 0 0 18px rgba(14,165,234,0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 10px 10px;
+  border-radius: 10px;
+}
+
+.neon-card::before{
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(140px 60px at left bottom, rgba(14,165,234,0.4), transparent 60%);
+  filter: blur(12px);
+  z-index: -1;
+}
+
+.neon-text{
+  text-shadow:
+    0 0 6px rgba(14,165,234,0.65),
+    0 0 14px rgba(14,165,234,0.45),
+    0 0 28px rgba(14,165,234,0.35);
+}
+
+.neon-badge{
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  background: rgba(14,165,234,0.22);
+  border: 1px solid rgba(14,165,234,0.35);
+  box-shadow:
+    0 0 10px rgba(14,165,234,0.35),
+    inset 0 0 8px rgba(14,165,234,0.22);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: var(--black);
+}
