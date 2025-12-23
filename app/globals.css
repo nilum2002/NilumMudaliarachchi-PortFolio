@@ -255,18 +255,17 @@ body{
 }
 
 .typing {
+  display: inline-block;
   overflow: hidden;
   border-right: 3px solid var(--prim-color);
   white-space: nowrap;
-  animation: typing 5s steps(15, end) infinite;
+  width: 0; /* start collapsed */
+  animation: typing 3s steps(17, end) infinite;
 }
 @keyframes typing {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
+  from { width: 0; }
+  /* Match the character count of the text "Recent Projects." → 16 */
+  to { width: 16ch; }
 }
 
 @keyframes blink {
@@ -379,4 +378,15 @@ body{
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   color: var(--black);
+}
+
+.tag-card{
+  transition: var(--transition-regular);
+}
+
+.tag-card:hover{
+  border: 1px solid var(--prim-color);
+  transform:translateY(-20px);
+  box-shadow: 0px 0px 10px #00a2ff80;
+  cursor: pointer;
 }
