@@ -53,7 +53,7 @@ const RecentProjects = [
 
 export default function Hero() {
   return (
-    <div>
+    <div id="hero">
       <div className="hero hero-header px-[8%] lg:px-[16%] pt-10 text-[var(--white)]">
         {/*Hero Section*/}
         <div className="w-full flex flex-col lg:flex-row gap-5 justify-between items-center">
