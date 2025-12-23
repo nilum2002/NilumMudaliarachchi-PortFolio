@@ -47,7 +47,7 @@ const AchievementsList = [
 
 export default function Achievements() {
   return (
-    <section className="relative z-10 mt-28 lg:mt-6 px-[8%] lg:px-[20%] py-16 bg-[var(--body-color)] text-[var(--white)]">
+    <section className="relative z-10 mt-28 lg:mt-6 px-[8%] lg:px-[16%] py-16 bg-[var(--body-color)] text-[var(--white)]">
       <div className="max-w-5xl space-y-6">
         <h2 className="text-4xl lg:text-5xl font-bold neon-text">
           Achivements.
