@@ -10,8 +10,10 @@ import Heroelm3 from "@/public/Hero-elm3.svg";
 import Heroelm4 from "@/public/Hero-elm4.svg";
 
 import resentProject01 from "@/public/RecentProject01.jpg";
+import resentProject02 from "@/public/RecentProject02.jpg";
+import resentProject03 from "@/public/RecentProject03.jpg";
 
-import {Swiper, SwiperSlide} from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -20,37 +22,34 @@ const RecentProjects = [
   {
     id: "1",
     title: "Automated Restaurant Feedback Agent",
-    subtitles: "New Test",
+    subtitles: "#AgenticAi",
     image: resentProject01,
     gitHubLink:
       "https://github.com/nilum2002/Automated-Restaurant-Feedback-Agent-SteamNoodles",
   },
   {
     id: "2",
-    title: "Automated Restaurant Feedback Agent",
-    subtitles: "New Test",
-    image: resentProject01,
-    gitHubLink:
-      "https://github.com/nilum2002/Automated-Restaurant-Feedback-Agent-SteamNoodles",
+    title: "Computer Vision Based Object Detection For Kuboki Qbot2",
+    subtitles: "#CV",
+    image: resentProject02,
+    gitHubLink: "https://github.com/Team-Botzilla/Final",
   },
   {
     id: "3",
-    title: "Automated Restaurant Feedback Agent",
-    subtitles: "New Test",
-    image: resentProject01,
-    gitHubLink:
-      "https://github.com/nilum2002/Automated-Restaurant-Feedback-Agent-SteamNoodles",
+    title: "Multitasking Robot with Low Resources ",
+    subtitles: "#Robotics",
+    image: resentProject03,
+    gitHubLink: "https://github.com/nilum2002/XbotiXRuhuna-GenXis-Academy",
   },
   {
     id: "4",
     title: "Automated Restaurant Feedback Agent",
-    subtitles: "New Test",
+    subtitles: "#AgenticAi",
     image: resentProject01,
     gitHubLink:
       "https://github.com/nilum2002/Automated-Restaurant-Feedback-Agent-SteamNoodles",
   },
 ];
-
 
 export default function Hero() {
   return (
@@ -112,11 +111,11 @@ export default function Hero() {
         </div>
         {/*Resent projects */}
         <div className="flex flex-col lg:flex-row justify-between gap-5 z-10 p-5 rounded-md border border-[var(--prim-light)] bg-[var(--bg-color)] relative">
-          <div className="w-full lg:w-1/1 relative">
+          <div className="w-full lg:w-1/3 relative">
             <h2 className="text-[var(--text)] font-mono text-xl font-bold typing">
               Recent Projects.
             </h2>
-            <p className="text-[var(--text-light)]">See My recent Projects</p>
+            <p className="text-[var(--text-light)]">See My Recent Projects</p>
             <div className="flex gap-3 mt-4">
               <div className="swiper-button-next hero-swiper-next swiper-btn w-8 h-8 bg-[var(--prim-light)] hover:bg-[var(--prim-color)]  rounded-full flex items-center justify-center cursor-pointer text-white">
                 <i className="bi bi-arrow-right"></i>
@@ -127,7 +126,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="w-full lg:w-[80%] hero-swiper">
+          <div className="w-full lg:w-[67%] hero-swiper">
             <Swiper
               modules={[Autoplay, Navigation]}
               navigation={{
@@ -156,10 +155,18 @@ export default function Hero() {
                       <Image
                         src={topic.image}
                         alt={topic.title}
-                        width={350}
-                        height={400}
-                        className="w-full h-full object-cover"
+                        // width={280}
+                        // height={413}
+                        className="w-full h-full object-cover rounded-lg"
                       />
+                      <div className="hot-topic-info absolute bottom-2 left-2 neon-card">
+                        <h2 className="font-mono text-white font-light neon-text">
+                          {topic.title}
+                        </h2>
+                        <p className="font-bold neon-badge mt-1">
+                          {topic.subtitles}
+                        </p>
+                      </div>
                     </div>
                   </Link>
                 </SwiperSlide>
