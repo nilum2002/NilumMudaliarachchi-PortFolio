@@ -11,6 +11,7 @@ import robogamesAchievement from "@/public/AchivementRobogames.jpg";
 import examAchivement01 from "@/public/examAchivemnt01.jpg";
 import examAchivement02 from "@/public/examAchivemnt02.jpg";
 import xtreamAchievement from "@/public/IEEExtream01.png";
+import codeArenaAchivement from "@/public/CodeArena01.jpg";
 
 const AchievementsList = [
   {
@@ -37,12 +38,12 @@ const AchievementsList = [
     description: "Our team placed top200 teams in SL Section",
     image: xtreamAchievement,
   },
-  //   {
-  //     id: "5",
-  //     title: "Machine Learning",
-  //     description: "Implemented ML pipelines for predictive analytics",
-  //     image: "/achievement5.jpg",
-  //   },
+  {
+    id: "5",
+    title: "CodeArena 2025",
+    description: "Awarded the title of Finalist in the University Category.",
+    image: codeArenaAchivement,
+  },
 ];
 
 export default function Achievements() {
