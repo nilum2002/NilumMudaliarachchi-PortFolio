@@ -91,7 +91,7 @@ export default function PopularTags() {
             Technologies & FrameWorks.
           </h1>
           <p className="text-lg text-[var(--text-light)] leading-relaxed mt-6">
-            Most used Technologies
+            Most used Technologies & FrameWorks
           </p>
         </div>
         <div className="mt-10">

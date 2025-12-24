@@ -71,7 +71,7 @@ export default function Footer() {
               </ul>
             </div>
             <div className="lg:col-start-3">
-              <h3 className="text-lg font-bold mb-4">Newsletter</h3>
+              <h3 className="text-lg font-bold mb-4">ContactMe</h3>
               <p className="text-[var(--text-light)] text-sm mb-6">
                 Contact Me via E-mail.
               </p>
