@@ -108,7 +108,7 @@ export default function Footer() {
               © copyright 2025. All Rights Reserved{" "}
               <span className="text-[var(--prim-color)] font-bold">NilumM</span>
             </div>
-            <div className="flex gap-8 text-[var(--text-light)]">
+            <div className="flex flex-wrap justify-center md:justify-end gap-4 sm:gap-6 text-[var(--text-light)]">
               <Link
                 href="https://github.com/nilum2002?tab=repositories"
                 target="_blank"
