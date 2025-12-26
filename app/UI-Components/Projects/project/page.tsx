@@ -4,6 +4,7 @@ import { useState } from "react";
 import projects from "@/app/JsonData/projects.json";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const tabs = [
   {
@@ -19,7 +20,7 @@ const tabs = [
     label: "Computer Vision",
   },
   {
-    id:"AI",
+    id: "AI",
     label: "AI",
   },
   {
@@ -30,6 +31,7 @@ const tabs = [
 
 export default function Projects() {
   const [activeTab, setActiveTab] = useState("all");
+  const router = useRouter();
   return (
     <>
       <div className="px-[8%] lg:px-[16%] py-10">
@@ -73,9 +75,22 @@ export default function Projects() {
           {activeTab === "all" && (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {projects.map((project, index) => (
-                <Link
-                  href={`/UI-Components/Projects/projectDetails/${project.id}`}
+                <div
                   key={index}
+                  role="link"
+                  tabIndex={0}
+                  onClick={() =>
+                    router.push(
+                      `/UI-Components/Projects/projectDetails/${project.id}`
+                    )
+                  }
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      router.push(
+                        `/UI-Components/Projects/projectDetails/${project.id}`
+                      );
+                    }
+                  }}
                 >
                   <div className="project-section rounded-2xl overflow-hidden z-10 cursor-pointer relative group h-[400px]">
                     <div className="project-image h-full">
@@ -112,16 +127,29 @@ export default function Projects() {
                       </div>
                     </div>
                   </div>
-                </Link>
+                </div>
               ))}
             </div>
           )}
           {activeTab === "robotics" && (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {projects.slice(2, 3).map((project, index) => (
-                <Link
-                  href={`/UI-Components/Projects/projectDetails/${project.id}`}
+                <div
                   key={index}
+                  role="link"
+                  tabIndex={0}
+                  onClick={() =>
+                    router.push(
+                      `/UI-Components/Projects/projectDetails/${project.id}`
+                    )
+                  }
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      router.push(
+                        `/UI-Components/Projects/projectDetails/${project.id}`
+                      );
+                    }
+                  }}
                 >
                   <div className="project-section rounded-2xl overflow-hidden z-10 cursor-pointer relative group h-[400px]">
                     <div className="project-image h-full">
@@ -158,16 +186,29 @@ export default function Projects() {
                       </div>
                     </div>
                   </div>
-                </Link>
+                </div>
               ))}
             </div>
           )}
           {activeTab === "Software-Eng" && (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {projects.slice(3, 4).map((project, index) => (
-                <Link
-                  href={`/UI-Components/Projects/projectDetails/${project.id}`}
+                <div
                   key={index}
+                  role="link"
+                  tabIndex={0}
+                  onClick={() =>
+                    router.push(
+                      `/UI-Components/Projects/projectDetails/${project.id}`
+                    )
+                  }
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      router.push(
+                        `/UI-Components/Projects/projectDetails/${project.id}`
+                      );
+                    }
+                  }}
                 >
                   <div className="project-section rounded-2xl overflow-hidden z-10 cursor-pointer relative group h-[400px]">
                     <div className="project-image h-full">
@@ -204,16 +245,29 @@ export default function Projects() {
                       </div>
                     </div>
                   </div>
-                </Link>
+                </div>
               ))}
             </div>
           )}
           {activeTab === "Computer Vision" && (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {projects.slice(1, 2).map((project, index) => (
-                <Link
-                  href={`/UI-Components/Projects/projectDetails/${project.id}`}
+                <div
                   key={index}
+                  role="link"
+                  tabIndex={0}
+                  onClick={() =>
+                    router.push(
+                      `/UI-Components/Projects/projectDetails/${project.id}`
+                    )
+                  }
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      router.push(
+                        `/UI-Components/Projects/projectDetails/${project.id}`
+                      );
+                    }
+                  }}
                 >
                   <div className="project-section rounded-2xl overflow-hidden z-10 cursor-pointer relative group h-[400px]">
                     <div className="project-image h-full">
@@ -250,16 +304,29 @@ export default function Projects() {
                       </div>
                     </div>
                   </div>
-                </Link>
+                </div>
               ))}
             </div>
           )}
           {activeTab === "AI" && (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {projects.slice(0, 1).map((project, index) => (
-                <Link
-                  href={`/UI-Components/Projects/projectDetails/${project.id}`}
+                <div
                   key={index}
+                  role="link"
+                  tabIndex={0}
+                  onClick={() =>
+                    router.push(
+                      `/UI-Components/Projects/projectDetails/${project.id}`
+                    )
+                  }
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      router.push(
+                        `/UI-Components/Projects/projectDetails/${project.id}`
+                      );
+                    }
+                  }}
                 >
                   <div className="project-section rounded-2xl overflow-hidden z-10 cursor-pointer relative group h-[400px]">
                     <div className="project-image h-full">
@@ -296,7 +363,7 @@ export default function Projects() {
                       </div>
                     </div>
                   </div>
-                </Link>
+                </div>
               ))}
             </div>
           )}
