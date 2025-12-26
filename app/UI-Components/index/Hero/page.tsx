@@ -12,6 +12,7 @@ import Heroelm4 from "@/public/Hero-elm4.svg";
 import resentProject01 from "@/public/RecentProject01.jpg";
 import resentProject02 from "@/public/RecentProject02.jpg";
 import resentProject03 from "@/public/RecentProject03.jpg";
+import resentProject04 from "@/public/RecentProject04.jpg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
@@ -43,11 +44,10 @@ const RecentProjects = [
   },
   {
     id: "4",
-    title: "Automated Restaurant Feedback Agent",
-    subtitles: "#AgenticAi",
-    image: resentProject01,
-    gitHubLink:
-      "https://github.com/nilum2002/Automated-Restaurant-Feedback-Agent-SteamNoodles",
+    title: "EduQuest Online Learning Platform",
+    subtitles: "#SoftwareEng",
+    image: resentProject04,
+    gitHubLink: "https://github.com/GenXisLabs/EduQuest",
   },
 ];
 
@@ -150,7 +150,7 @@ export default function Hero() {
             >
               {RecentProjects.map((topic) => (
                 <SwiperSlide key={topic.id}>
-                  <Link href="/UI-Components/RecentProjects" className="block">
+                  <Link href="/UI-Components/Projects/project" className="block">
                     <div className="relative hot-topic-card cursor-pointer">
                       <Image
                         src={topic.image}
@@ -166,6 +166,7 @@ export default function Hero() {
                         <p className="font-bold neon-badge mt-1">
                           {topic.subtitles}
                         </p>
+
                       </div>
                     </div>
                   </Link>

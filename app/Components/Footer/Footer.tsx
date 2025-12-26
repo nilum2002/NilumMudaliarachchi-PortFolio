@@ -31,7 +31,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/"
-                    className="hover:text-[var(--prim-color)] transition"
+                    className="hover:text-[var(--prim-color)] transition-colors duration-300"
                   >
                     Home
                   </Link>
@@ -39,7 +39,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/#projects"
-                    className="hover:text-[var(--prim-color)] transition"
+                    className="hover:text-[var(--prim-color)] transition-colors duration-300"
                   >
                     Projects
                   </Link>
@@ -47,7 +47,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/articles"
-                    className="hover:text-[var(--prim-color)] transition"
+                    className="hover:text-[var(--prim-color)] transition-colors duration-300"
                   >
                     Articles
                   </Link>
@@ -55,7 +55,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/about"
-                    className="hover:text-[var(--prim-color)] transition"
+                    className="hover:text-[var(--prim-color)] transition-colors duration-300"
                   >
                     About
                   </Link>
@@ -63,7 +63,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/contact"
-                    className="hover:text-[var(--prim-color)] transition"
+                    className="hover:text-[var(--prim-color)] transition-colors duration-300"
                   >
                     Contact
                   </Link>
@@ -94,7 +94,7 @@ export default function Footer() {
                 </div>
                 <button
                   type="submit"
-                  className="mt-6 px-6 py-2 bg-gradient-to-r from-[#0ea5ea] to-[#4d98bd] text-[var(--white)] rounded-lg font-semibold hover:shadow-lg hover:shadow-[rgba(14,165,234,0.5)] transition"
+                  className="mt-6 px-6 py-2 bg-gradient-to-r from-[#0ea5ea] to-[#4d98bd] text-[var(--white)] rounded-lg font-semibold hover:shadow-lg hover:shadow-[rgba(14,165,234,0.5)] transition-shadow duration-300"
                 >
                   Send <i className="bi bi-arrow-right ml-2"></i>
                 </button>
@@ -113,7 +113,7 @@ export default function Footer() {
                 href="https://github.com/nilum2002?tab=repositories"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-[var(--prim-color)] transition"
+                className="hover:text-[var(--prim-color)] transition-colors duration-300"
               >
                 <i className="bi bi-github mr-2"></i>GitHub
               </Link>
@@ -121,7 +121,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/in/nilum2002/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-[var(--prim-color)] transition"
+                className="hover:text-[var(--prim-color)] transition-colors duration-300"
               >
                 <i className="bi bi-linkedin mr-2"></i>LinkedIn
               </Link>
@@ -129,7 +129,7 @@ export default function Footer() {
                 href="https://www.kaggle.com/nilummudaliarachchi"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-[var(--prim-color)] transition"
+                className="hover:text-[var(--prim-color)] transition-colors duration-300"
               >
                 <i className="bi bi-trophy mr-2"></i>Kaggle
               </Link>
@@ -137,7 +137,7 @@ export default function Footer() {
                 href="https://medium.com/@sachithyanilum"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-[var(--prim-color)] transition"
+                className="hover:text-[var(--prim-color)] transition-colors duration-300"
               >
                 <i className="bi bi-rss mr-2"></i>Medium
               </Link>

@@ -13,7 +13,7 @@ const navLinks: NavLink[] = [
   { label: "Home", href: "/#hero" },
   {
     label: "Projects",
-    href: "/app/UI-Components/Projects/project",
+    href: "/UI-Components/Projects/project",
     dropdown: [
       { label: "My Projects", href: "/UI-Components/Projects/project" },
       {
