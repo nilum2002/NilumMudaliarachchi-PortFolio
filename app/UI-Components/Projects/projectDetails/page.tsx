@@ -6,7 +6,6 @@ import UnderConstruction from "@/public/under-construction.png";
 
 export default function projectDetails() {
   return (
-    <>
       <>
       <div className="px-[8%] lg:px-[16%] py-10">
         <div className="heading border-b border-[var(--light-border) pb-5 px-5 mb-10">
