@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   title: "Nilum Mudaliarachchi",
   description: "Nilums Portfolio",
   icons: {
-    icon: "/robot-svgrepo-com.svg",
+    icon: "./robot-svgrepo-com.svg",
   },
 };
 

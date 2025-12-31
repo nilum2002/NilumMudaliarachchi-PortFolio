@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import ArticleData from "@/app/JsonData/Blogs.json";
+import UnderConstruction from "@/public/under-construction.png";
 
 export default function Articles() {
   return (
@@ -26,9 +27,7 @@ export default function Articles() {
       <div className="flex flex-col md:flex-row items-center justify-center gap-8 py-20 px-[8%] lg:px-[16%]">
         <div className="max-w-xs w-full">
           <Image
-            src={`${
-              process.env.NEXT_PUBLIC_BASE_PATH || ""
-            }/under-construction.png`}
+            src={UnderConstruction}
             alt="Under Construction"
             width={300}
             height={300}
