@@ -18,23 +18,23 @@ const navLinks: NavLink[] = [
       { label: "My Projects", href: "/UI-Components/Projects/project" },
       {
         label: "Projects Details",
-        href: "/app/UI-Components/Projects/project/projectDetails",
+        href: "/UI-Components/Projects/projectDetails",
       },
     ],
   },
   {
     label: "Articles",
-    href: "/app/UI-Components/Blogs/blog",
+    href: "/UI-Components/Blogs/blog",
     dropdown: [
-      { label: "Articles", href: "/app/UI-Components/Blogs/blog" },
+      { label: "Articles", href: "/UI-Components/Blogs/blog" },
       {
         label: "Articles Details",
-        href: "/app/UI-Components/Blogs/blogDetails/2",
+        href: "/UI-Components/Blogs/blogDetails/",
       },
     ],
   },
-  { label: "About", href: "/app/UI-Components/pages/About" },
-  { label: "Contact", href: "/app/UI-Components/pages/Contact" },
+  { label: "About", href: "/UI-Components/pages/About" },
+  { label: "Contact", href: "/UI-Components/pages/Contact" },
 ];
 
 export default function Navbar() {
