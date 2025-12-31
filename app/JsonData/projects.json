@@ -1,7 +1,7 @@
 [
     {
         "id" : "1",
-        "img": "/RecentProject01.jpg",
+        "img": "./RecentProject01.jpg",
         "title" : "AI Feedback Agent",
         "desc" : "Automated Restaurant Feedback Agent using LangChain.",
         "git-hub-link": "https://github.com/nilum2002/Automated-Restaurant-Feedback-Agent-SteamNoodles"
@@ -9,21 +9,21 @@
 
     {
         "id" : "2",
-        "img": "/RecentProject02.jpg",
+        "img": "./RecentProject02.jpg",
         "title" : "CV Cube Detection",
         "desc" : "Computer Vision Based Object Detection For Kuboki Qbot2",
         "git-hub-link": "https://github.com/Team-Botzilla/Final"
     },
     {
         "id" : "3",
-        "img": "/RecentProject03.jpg",
+        "img": "./RecentProject03.jpg",
         "title" : "Multitasking Robot with low resources",
         "desc" : "A multi-tasking robot for a competition",
         "git-hub-link": "https://github.com/nilum2002/XbotiXRuhuna-GenXis-Academy"
     },
     {
         "id" : "4",
-        "img": "/RecentProject04.jpg",
+        "img": "./RecentProject04.jpg",
         "title" : "EduQuest",
         "desc" : "Online exam platform",
         "git-hub-link": "https://github.com/GenXisLabs/EduQuest"
