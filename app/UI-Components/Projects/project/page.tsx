@@ -32,6 +32,7 @@ const tabs = [
 export default function Projects() {
   const [activeTab, setActiveTab] = useState("all");
   const router = useRouter();
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   return (
     <>
       <div className="px-[8%] lg:px-[16%] py-10">
@@ -95,9 +96,7 @@ export default function Projects() {
                   <div className="project-section rounded-2xl overflow-hidden z-10 cursor-pointer relative group h-[400px]">
                     <div className="project-image h-full">
                       <Image
-                        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${
-                          project.img
-                        }`}
+                        src={`${basePath}${project.img}`}
                         alt={project.title}
                         width={300}
                         height={300}
@@ -156,9 +155,7 @@ export default function Projects() {
                   <div className="project-section rounded-2xl overflow-hidden z-10 cursor-pointer relative group h-[400px]">
                     <div className="project-image h-full">
                       <Image
-                        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${
-                          project.img
-                        }`}
+                        src={`${basePath}${project.img}`}
                         alt={project.title}
                         width={300}
                         height={300}
@@ -217,9 +214,7 @@ export default function Projects() {
                   <div className="project-section rounded-2xl overflow-hidden z-10 cursor-pointer relative group h-[400px]">
                     <div className="project-image h-full">
                       <Image
-                        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${
-                          project.img
-                        }`}
+                        src={`${basePath}${project.img}`}
                         alt={project.title}
                         width={300}
                         height={300}
@@ -278,9 +273,7 @@ export default function Projects() {
                   <div className="project-section rounded-2xl overflow-hidden z-10 cursor-pointer relative group h-[400px]">
                     <div className="project-image h-full">
                       <Image
-                        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${
-                          project.img
-                        }`}
+                        src={`${basePath}${project.img}`}
                         alt={project.title}
                         width={300}
                         height={300}
@@ -339,7 +332,7 @@ export default function Projects() {
                   <div className="project-section rounded-2xl overflow-hidden z-10 cursor-pointer relative group h-[400px]">
                     <div className="project-image h-full">
                       <Image
-                        src={project.img}
+                        src={`${basePath}${project.img}`}
                         alt={project.title}
                         width={300}
                         height={300}
