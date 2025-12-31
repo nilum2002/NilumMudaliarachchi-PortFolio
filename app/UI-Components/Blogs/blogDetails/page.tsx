@@ -23,26 +23,28 @@ export default function ArticleDetails() {
         </div>
       </div>
       {/* Under Construction Section */}
-            <div className="flex flex-col md:flex-row items-center justify-center gap-8 py-20 px-[8%] lg:px-[16%]">
-              <div className="max-w-xs w-full">
-                <Image
-                  src="/under-construction.png"
-                  alt="Under Construction"
-                  width={300}
-                  height={300}
-                  className="w-full h-auto"
-                />
-              </div>
-              <div className="flex flex-col justify-center">
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--prim-color)] text-center md:text-left">
-                  Under Construction
-                </h2>
-                <p className="text-[var(--text-light)] text-center md:text-left mt-4 max-w-md">
-                  This page is currently under construction. Check back soon for
-                  exciting articles and content!
-                </p>
-              </div>
-            </div>
+      <div className="flex flex-col md:flex-row items-center justify-center gap-8 py-20 px-[8%] lg:px-[16%]">
+        <div className="max-w-xs w-full">
+          <Image
+            src={`${
+              process.env.NEXT_PUBLIC_BASE_PATH || ""
+            }/under-construction.png`}
+            alt="Under Construction"
+            width={300}
+            height={300}
+            className="w-full h-auto"
+          />
+        </div>
+        <div className="flex flex-col justify-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-[var(--prim-color)] text-center md:text-left">
+            Under Construction
+          </h2>
+          <p className="text-[var(--text-light)] text-center md:text-left mt-4 max-w-md">
+            This page is currently under construction. Check back soon for
+            exciting articles and content!
+          </p>
+        </div>
+      </div>
     </>
   );
 }

@@ -26,7 +26,9 @@ export default function Articles() {
       <div className="flex flex-col md:flex-row items-center justify-center gap-8 py-20 px-[8%] lg:px-[16%]">
         <div className="max-w-xs w-full">
           <Image
-            src="/under-construction.png"
+            src={`${
+              process.env.NEXT_PUBLIC_BASE_PATH || ""
+            }/under-construction.png`}
             alt="Under Construction"
             width={300}
             height={300}
