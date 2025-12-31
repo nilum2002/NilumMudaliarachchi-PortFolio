@@ -11,6 +11,8 @@ const nextConfig: NextConfig = {
   env: {
     NEXT_PUBLIC_BASE_PATH: '/NilumMudaliarachchi-PortFolio',
   },
+  compress: true,
+  poweredByHeader: false,
 };
 
 export default nextConfig;

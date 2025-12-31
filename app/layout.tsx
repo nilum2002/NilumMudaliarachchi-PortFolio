@@ -21,6 +21,7 @@ const BBHbartle = BBH_Sans_Bartle({
   variable: "--font-bbh-bartle",
   subsets: ["latin"],
   display: "swap",
+  preload: true,
 });
 export const metadata: Metadata = {
   title: "Nilum Mudaliarachchi",

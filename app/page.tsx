@@ -1,15 +1,29 @@
-import Hero from "./UI-Components/index/Hero/page";
-import AboutMe from "./UI-Components/index/AboutMe/page";
-import Achievements from "./UI-Components/index/Achivements/page";
-import PopularTags from "./UI-Components/index/PopularTags/page";
+import dynamic from "next/dynamic";
 import Index from "./UI-Components/index";
+
+const AboutMe = dynamic(() => import("./UI-Components/index/AboutMe/page"), {
+  loading: () => <div className="min-h-screen" />,
+});
+const Achievements = dynamic(
+  () => import("./UI-Components/index/Achivements/page"),
+  {
+    loading: () => <div className="min-h-screen" />,
+  }
+);
+const PopularTags = dynamic(
+  () => import("./UI-Components/index/PopularTags/page"),
+  {
+    loading: () => <div className="min-h-screen" />,
+  }
+);
+
 export default function Home() {
   return (
     <>
-      <Index/>
+      <Index />
       <AboutMe />
-      <Achievements/>
-      <PopularTags/>
+      <Achievements />
+      <PopularTags />
     </>
   );
 }

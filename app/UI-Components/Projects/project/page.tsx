@@ -83,13 +83,13 @@ export default function Projects() {
                   tabIndex={0}
                   onClick={() =>
                     router.push(
-                      `/UI-Components/Projects/projectDetails/${project.id}`
+                      `/UI-Components/Projects/projectDetails`
                     )
                   }
                   onKeyDown={(e) => {
                     if (e.key === "Enter" || e.key === " ") {
                       router.push(
-                        `/UI-Components/Projects/projectDetails/${project.id}`
+                        `/UI-Components/Projects/projectDetails`
                       );
                     }
                   }}
