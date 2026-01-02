@@ -10,52 +10,43 @@ import Heroelm3 from "@/public/Hero-elm3.svg";
 import Heroelm4 from "@/public/Hero-elm4.svg";
 import UniversityLogo from "@/public/University_of_Moratuwa_logo.png";
 
+const BASE_PATH =
+  process.env.NEXT_PUBLIC_BASE_PATH || "/NilumMudaliarachchi-PortFolio";
+
 const galleryItems = [
   {
-    src: `${
-      process.env.NEXT_PUBLIC_BASE_PATH || ""
-    }/img-gallery/FB_IMG_1744092930914.jpg`,
+    src: `${BASE_PATH}/img-gallery/FB_IMG_1744092930914.jpg`,
     alt: "Hardware in the field during testing",
     title: "RoboGames 2024/25",
     meta: "Robotics",
   },
   {
-    src: `${
-      process.env.NEXT_PUBLIC_BASE_PATH || ""
-    }/img-gallery/roboGames2024.jpg`,
+    src: `${BASE_PATH}/img-gallery/roboGames2024.jpg`,
     alt: "RoboGames Final 2024/25",
     title: "RoboGames 2024/25",
     meta: "Robotics",
   },
   {
-    src: `${
-      process.env.NEXT_PUBLIC_BASE_PATH || ""
-    }/img-gallery/robogamesWorkshop.jpg`,
+    src: `${BASE_PATH}/img-gallery/robogamesWorkshop.jpg`,
     alt: "Architecture sketch for an AI pipeline",
     title: "AI pipeline design",
     meta: "Model ops & data flow",
   },
   {
-    src: `${
-      process.env.NEXT_PUBLIC_BASE_PATH || ""
-    }/img-gallery/FB_IMG_1738347096150.jpg`,
+    src: `${BASE_PATH}/img-gallery/FB_IMG_1738347096150.jpg`,
     alt: "Observability dashboard screenshot",
     title: "Backend observability",
     meta: "Tracing & metrics",
   },
   {
     /*FB_IMG_1741144655816 */
-    src: `${
-      process.env.NEXT_PUBLIC_BASE_PATH || ""
-    }/img-gallery/FB_IMG_1741144655816.jpg`,
+    src: `${BASE_PATH}/img-gallery/FB_IMG_1741144655816.jpg`,
     alt: "Robotics demo on a test bench",
     title: "Robotics",
     meta: "Control + firmware",
   },
   {
-    src: `${
-      process.env.NEXT_PUBLIC_BASE_PATH || ""
-    }/img-gallery/FB_IMG_1745222345540.jpg`,
+    src: `${BASE_PATH}/img-gallery/FB_IMG_1745222345540.jpg`,
     alt: "Hackathon team collaboration",
     title: "Team builds",
     meta: "Fast iterations",
