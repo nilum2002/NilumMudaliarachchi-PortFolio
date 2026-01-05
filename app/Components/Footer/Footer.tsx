@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { SocialIcons } from "@/components/ui/social-icons";
+
 export default function Footer() {
   return (
     <>
@@ -108,40 +110,7 @@ export default function Footer() {
               © copyright 2025. All Rights Reserved{" "}
               <span className="text-[var(--prim-color)] font-bold">NilumM</span>
             </div>
-            <div className="flex flex-wrap justify-center md:justify-end gap-4 sm:gap-6 text-[var(--text-light)]">
-              <Link
-                href="https://github.com/nilum2002?tab=repositories"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-[var(--prim-color)] transition-colors duration-300"
-              >
-                <i className="bi bi-github mr-2"></i>GitHub
-              </Link>
-              <Link
-                href="https://www.linkedin.com/in/nilum2002/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-[var(--prim-color)] transition-colors duration-300"
-              >
-                <i className="bi bi-linkedin mr-2"></i>LinkedIn
-              </Link>
-              <Link
-                href="https://www.kaggle.com/nilummudaliarachchi"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-[var(--prim-color)] transition-colors duration-300"
-              >
-                <i className="bi bi-trophy mr-2"></i>Kaggle
-              </Link>
-              <Link
-                href="https://medium.com/@sachithyanilum"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-[var(--prim-color)] transition-colors duration-300"
-              >
-                <i className="bi bi-rss mr-2"></i>Medium
-              </Link>
-            </div>
+            <SocialIcons />
           </div>
         </div>
       </div>
