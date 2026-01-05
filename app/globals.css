@@ -21,7 +21,6 @@
   --font-geist-mono: "Geist Mono", monospace;
 
   /* Additional Google Fonts */
-  --font-bbh-bartle: "BBH Bartle", serif;
   --font-nata-sans: "Nata Sans", sans-serif;
   --font-unbounded: "Unbounded", sans-serif;
   --font-geom: "Geom", sans-serif;
@@ -48,9 +47,6 @@ html.light{
 }
 .font-geist-mono{
   font-family: var(--font-geist-mono);
-}
-.font-bbh-bartle{
-  font-family: var(--font-bbh-bartle);
 }
 .font-nata-sans{
   font-family: var(--font-nata-sans);

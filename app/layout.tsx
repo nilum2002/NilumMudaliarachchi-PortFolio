@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { BBH_Sans_Bartle, Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
@@ -16,13 +16,6 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-const BBHbartle = BBH_Sans_Bartle({
-  weight: "400",
-  variable: "--font-bbh-bartle",
-  subsets: ["latin"],
-  display: "swap",
-  preload: true,
-});
 export const metadata: Metadata = {
   title: "Nilum Mudaliarachchi",
   description: "Nilums Portfolio",
@@ -39,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${BBHbartle.variable} antialiased font-nata-sans`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased font-nata-sans`}
       >
         <Navbar />
         {children}
