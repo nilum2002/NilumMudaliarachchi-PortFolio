@@ -80,6 +80,7 @@ export default function Hero() {
                 alt="Nilum Mudaliarachchi"
                 width={450}
                 height={600}
+                priority={true}
               />
               <Image
                 src={Heroelm1}
@@ -115,7 +116,9 @@ export default function Hero() {
             <h2 className="text-[var(--text)] font-mono text-xl font-bold typing">
               Recent Projects.
             </h2>
-            <p className="text-[var(--text-light)]">See My Recent Projects here</p>
+            <p className="text-[var(--text-light)]">
+              See My Recent Projects here
+            </p>
             <div className="flex gap-3 mt-4">
               <div className="swiper-button-next hero-swiper-next swiper-btn w-8 h-8 bg-[var(--prim-light)] hover:bg-[var(--prim-color)]  rounded-full flex items-center justify-center cursor-pointer text-white">
                 <i className="bi bi-arrow-right"></i>
@@ -150,13 +153,18 @@ export default function Hero() {
             >
               {RecentProjects.map((topic) => (
                 <SwiperSlide key={topic.id}>
-                  <Link href="/UI-Components/Projects/project" className="block">
+                  <Link
+                    href="/UI-Components/Projects/project"
+                    className="block"
+                  >
                     <div className="relative hot-topic-card cursor-pointer">
                       <Image
                         src={topic.image}
                         alt={topic.title}
                         // width={280}
                         // height={413}
+                        loading="lazy" // Add this - loads images only when needed
+                        placeholder="blur"
                         className="w-full h-full object-cover rounded-lg"
                       />
                       <div className="hot-topic-info absolute bottom-2 left-2 neon-card">
@@ -166,7 +174,6 @@ export default function Hero() {
                         <p className="font-bold neon-badge mt-1">
                           {topic.subtitles}
                         </p>
-
                       </div>
                     </div>
                   </Link>

@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 import robogamesAchievement from "@/public/AchivementRobogames.webp";
 import examAchivement01 from "@/public/examAchivemnt01.webp";
 import examAchivement02 from "@/public/examAchivemnt02.webp";
-import xtreamAchievement from "@/public/IEEExtream01.webp";
+import xtreamAchievement from "@/public/IEEExtream01.png";
 import codeArenaAchivement from "@/public/CodeArena01.webp";
 
 const AchievementsList = [
