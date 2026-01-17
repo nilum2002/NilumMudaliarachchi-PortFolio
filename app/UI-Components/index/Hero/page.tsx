@@ -9,10 +9,10 @@ import Heroelm2 from "@/public/Hero-elm2.svg";
 import Heroelm3 from "@/public/Hero-elm3.svg";
 import Heroelm4 from "@/public/Hero-elm4.svg";
 
-import resentProject01 from "@/public/RecentProject01.jpg";
-import resentProject02 from "@/public/RecentProject02.jpg";
-import resentProject03 from "@/public/RecentProject03.jpg";
-import resentProject04 from "@/public/RecentProject04.jpg";
+import resentProject01 from "@/public/RecentProject01.webp";
+import resentProject02 from "@/public/RecentProject02.webp";
+import resentProject03 from "@/public/RecentProject03.webp";
+import resentProject04 from "@/public/RecentProject04.webp";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";

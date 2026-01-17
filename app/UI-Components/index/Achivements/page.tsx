@@ -7,11 +7,11 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import robogamesAchievement from "@/public/AchivementRobogames.jpg";
-import examAchivement01 from "@/public/examAchivemnt01.jpg";
-import examAchivement02 from "@/public/examAchivemnt02.jpg";
-import xtreamAchievement from "@/public/IEEExtream01.png";
-import codeArenaAchivement from "@/public/CodeArena01.jpg";
+import robogamesAchievement from "@/public/AchivementRobogames.webp";
+import examAchivement01 from "@/public/examAchivemnt01.webp";
+import examAchivement02 from "@/public/examAchivemnt02.webp";
+import xtreamAchievement from "@/public/IEEExtream01.webp";
+import codeArenaAchivement from "@/public/CodeArena01.webp";
 
 const AchievementsList = [
   {
