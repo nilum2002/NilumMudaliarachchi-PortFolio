@@ -14,7 +14,7 @@ import Heroelm4 from "@/public/Hero-elm4.svg";
 export default function Hero() {
   return (
     <div id="hero">
-      <div className="hero hero-header px-[8%] lg:px-[16%] pt-25 text-[var(--white)]">
+      <div className="hero hero-header px-[8%] lg:px-[16%] pt-15 text-[var(--white)]">
         {/*Hero Section*/}
         <div className="w-full flex flex-col lg:flex-row gap-5 justify-between items-center">
           <div className="w-full lg:w-1/2 lg:-mt-8">

@@ -50,7 +50,7 @@ export default function RecentProjectsSection() {
       <h2 className="text-4xl lg:text-5xl font-bold neon-text mb-10">
         Recent Projects.
       </h2>
-      <div className="flex flex-col lg:flex-row justify-between gap-5 z-10 p-5 rounded-md border border-[var(--prim-light)] bg-[var(--bg-color)] relative">
+      <div className="flex flex-col lg:flex-row justify-between gap-5 z-10 p-3 rounded-md border border-[var(--prim-light)] bg-[var(--bg-color)] relative">
         <div className="w-full lg:w-1/3 relative">
           <p className="text-[var(--text-light)]">
             See My Recent Projects here
