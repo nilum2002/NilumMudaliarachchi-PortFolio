@@ -15,38 +15,38 @@ const BASE_PATH =
 
 const galleryItems = [
   {
-    src: `${BASE_PATH}/img-gallery/FB_IMG_1744092930914.jpg`,
+    src: `${BASE_PATH}/img-gallery/FB_IMG_1744092930914.webp`,
     alt: "Hardware in the field during testing",
     title: "RoboGames 2024/25",
     meta: "Robotics",
   },
   {
-    src: `${BASE_PATH}/img-gallery/roboGames2024.jpg`,
+    src: `${BASE_PATH}/img-gallery/roboGames2024.webp`,
     alt: "RoboGames Final 2024/25",
     title: "RoboGames 2024/25",
     meta: "Robotics",
   },
   {
-    src: `${BASE_PATH}/img-gallery/robogamesWorkshop.jpg`,
+    src: `${BASE_PATH}/img-gallery/robogamesWorkshop.webp`,
     alt: "Architecture sketch for an AI pipeline",
     title: "AI pipeline design",
     meta: "Model ops & data flow",
   },
   {
-    src: `${BASE_PATH}/img-gallery/FB_IMG_1738347096150.jpg`,
+    src: `${BASE_PATH}/img-gallery/FB_IMG_1738347096150.webp`,
     alt: "Observability dashboard screenshot",
     title: "Backend observability",
     meta: "Tracing & metrics",
   },
   {
     /*FB_IMG_1741144655816 */
-    src: `${BASE_PATH}/img-gallery/FB_IMG_1741144655816.jpg`,
+    src: `${BASE_PATH}/img-gallery/FB_IMG_1741144655816.webp`,
     alt: "Robotics demo on a test bench",
     title: "Robotics",
     meta: "Control + firmware",
   },
   {
-    src: `${BASE_PATH}/img-gallery/FB_IMG_1745222345540.jpg`,
+    src: `${BASE_PATH}/img-gallery/FB_IMG_1745222345540.webp`,
     alt: "Hackathon team collaboration",
     title: "Team builds",
     meta: "Fast iterations",
@@ -235,6 +235,7 @@ export default function AboutMe() {
                         src={item.src}
                         alt={item.alt}
                         fill
+                        sizes="280px"
                         className="object-cover"
                       />
 

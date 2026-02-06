@@ -48,11 +48,6 @@ export default function Hero() {
                 className="hero-elm hero-elm-1"
               />
               <Image
-                src={Heroelm1}
-                alt="Heroelm1"
-                className="hero-elm hero-elm-1"
-              />
-              <Image
                 src={Heroelm2}
                 alt="Heroelm2"
                 className="hero-elm hero-elm-2"
