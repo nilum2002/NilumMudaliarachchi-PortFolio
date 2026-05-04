@@ -15,11 +15,13 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export const metadata: Metadata = {
   title: "Nilum Mudaliarachchi",
   description: "Nilums Portfolio",
   icons: {
-    icon: "/robot-svgrepo-com.svg",
+    icon: `${BASE_PATH}/robot-svgrepo-com.svg`,
   },
 };
 

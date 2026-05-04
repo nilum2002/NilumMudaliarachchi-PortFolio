@@ -1,3 +1,20 @@
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//   output: 'export',
+//   basePath: '/NilumMudaliarachchi-PortFolio',
+//   assetPrefix: '/NilumMudaliarachchi-PortFolio',
+//   trailingSlash: true,
+//   images: {
+//     unoptimized: true,
+//   },
+//   env: {
+//     NEXT_PUBLIC_BASE_PATH: '/NilumMudaliarachchi-PortFolio',
+//   },
+//   compress: true,
+//   poweredByHeader: false,
+// };
+
+// module.exports = nextConfig;
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
@@ -16,3 +33,4 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+
