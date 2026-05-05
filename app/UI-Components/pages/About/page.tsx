@@ -14,43 +14,115 @@ const BASE_PATH =
   process.env.NEXT_PUBLIC_BASE_PATH || "/NilumMudaliarachchi-PortFolio";
 
 const galleryItems = [
+  // {
+  //   src: `${BASE_PATH}/img-gallery/FB_IMG_1744092930914.webp`,
+  //   alt: "Hardware in the field during testing",
+  //   title: "RoboGames 2024/25",
+  //   meta: "Robotics",
+  // },
   {
-    src: `${BASE_PATH}/img-gallery/FB_IMG_1744092930914.jpg`,
-    alt: "Hardware in the field during testing",
-    title: "RoboGames 2024/25",
-    meta: "Robotics",
-  },
-  {
-    src: `${BASE_PATH}/img-gallery/roboGames2024.jpg`,
+    src: `${BASE_PATH}/img-gallery/roboGames2024.webp`,
     alt: "RoboGames Final 2024/25",
     title: "RoboGames 2024/25",
     meta: "Robotics",
   },
   {
-    src: `${BASE_PATH}/img-gallery/robogamesWorkshop.jpg`,
+    src: `${BASE_PATH}/img-gallery/robogamesWorkshop.webp`,
     alt: "Architecture sketch for an AI pipeline",
     title: "AI pipeline design",
     meta: "Model ops & data flow",
   },
   {
-    src: `${BASE_PATH}/img-gallery/FB_IMG_1738347096150.jpg`,
+    src: `${BASE_PATH}/img-gallery/FB_IMG_1738347096150.webp`,
     alt: "Observability dashboard screenshot",
     title: "Backend observability",
     meta: "Tracing & metrics",
   },
   {
     /*FB_IMG_1741144655816 */
-    src: `${BASE_PATH}/img-gallery/FB_IMG_1741144655816.jpg`,
+    src: `${BASE_PATH}/img-gallery/FB_IMG_1741144655816.webp`,
     alt: "Robotics demo on a test bench",
     title: "Robotics",
     meta: "Control + firmware",
   },
   {
-    src: `${BASE_PATH}/img-gallery/FB_IMG_1745222345540.jpg`,
+    src: `${BASE_PATH}/img-gallery/FB_IMG_1745222345540.webp`,
     alt: "Hackathon team collaboration",
     title: "Team builds",
     meta: "Fast iterations",
   },
+  {
+    src: `${BASE_PATH}/img-gallery/DSC09008.webp`,
+    alt: "SLIOT 20226",
+    title: "Selection Committee",
+    meta: "Fast iterations",
+  },
+  {
+    src: `${BASE_PATH}/img-gallery/DSC09050.webp`,
+    alt: "SLIOT 20226",
+    title: "Selection Committee",
+    meta: "Fast iterations",
+  },
+  {
+    src: `${BASE_PATH}/img-gallery/FB_IMG_1776678938087.webp`,
+    alt: "SLIOT 20226 Semifinals",
+    title: "Selection Committee",
+    meta: "Fast iterations",
+  },
+  {
+    src: `${BASE_PATH}/img-gallery/IMG-20260401-WA0070.webp`,
+    alt: "SLIOT 20226 Semifinals",
+    title: "Selection Committee",
+    meta: "Fast iterations",
+  },
+  {
+    src: `${BASE_PATH}/img-gallery/FB_IMG_1741144689677.webp`,
+    alt: "New Image",
+    title: "New Image",
+    meta: "Gallery",
+  },
+  {
+    src: `${BASE_PATH}/img-gallery/FB_IMG_1747571468998.webp`,
+    alt: "New Image",
+    title: "New Image",
+    meta: "Gallery",
+  },
+  {
+    src: `${BASE_PATH}/img-gallery/FB_IMG_1776678938087 (1).webp`,
+    alt: "New Image",
+    title: "New Image",
+    meta: "Gallery",
+  },
+  {
+    src: `${BASE_PATH}/img-gallery/IMG-20260403-WA0014.webp`,
+    alt: "New Image",
+    title: "New Image",
+    meta: "Gallery",
+  },
+  {
+    src: `${BASE_PATH}/img-gallery/IMG-20260403-WA0035.webp`,
+    alt: "New Image",
+    title: "New Image",
+    meta: "Gallery",
+  },
+  {
+    src: `${BASE_PATH}/img-gallery/IMG-20260425-WA0130.webp`,
+    alt: "New Image",
+    title: "New Image",
+    meta: "Gallery",
+  },
+  {
+    src: `${BASE_PATH}/img-gallery/IMG-20260425-WA0172.webp`,
+    alt: "New Image",
+    title: "New Image",
+    meta: "Gallery",
+  },
+  {
+    src: `${BASE_PATH}/img-gallery/IMG-20260425-WA0174.webp`,
+    alt: "New Image",
+    title: "New Image",
+    meta: "Gallery",
+  }
 ];
 
 export default function AboutMe() {
