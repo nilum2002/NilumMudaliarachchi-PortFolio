@@ -1,7 +1,12 @@
 "use client";
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
 
 import HeroImg from "@/public/me_new.png";
 import Heroelm1 from "@/public/Hero-elm1.svg";
@@ -21,47 +26,47 @@ const galleryItems = [
   //   meta: "Robotics",
   // },
   {
-    src: `${BASE_PATH}/img-gallery/roboGames2024.webp`,
+    src: `${BASE_PATH}/img-gallery/roboGames2024.jpg`,
     alt: "RoboGames Final 2024/25",
     title: "RoboGames 2024/25",
     meta: "Robotics",
   },
   {
     src: `${BASE_PATH}/img-gallery/robogamesWorkshop.webp`,
-    alt: "Architecture sketch for an AI pipeline",
-    title: "AI pipeline design",
-    meta: "Model ops & data flow",
+    alt: "Robogames Final Workshop 2024/25",
+    title: "Robogames Final Workshop 2024/25",
+    meta: "Robotics",
   },
   {
     src: `${BASE_PATH}/img-gallery/FB_IMG_1738347096150.webp`,
-    alt: "Observability dashboard screenshot",
-    title: "Backend observability",
-    meta: "Tracing & metrics",
+    alt: "CSE 23 Welcome Event",
+    title: "CSE 23 Welcome Event",
+    meta: "Welcome event",
   },
   {
     /*FB_IMG_1741144655816 */
     src: `${BASE_PATH}/img-gallery/FB_IMG_1741144655816.webp`,
-    alt: "Robotics demo on a test bench",
-    title: "Robotics",
-    meta: "Control + firmware",
+    alt: "Robogame Finals 2024/25",
+    title: "Robogame Finals 2024/25",
+    meta: "Robotics",
   },
   {
     src: `${BASE_PATH}/img-gallery/FB_IMG_1745222345540.webp`,
-    alt: "Hackathon team collaboration",
-    title: "Team builds",
-    meta: "Fast iterations",
+    alt: "ADCScI 2024",
+    title: "ADCScI 2024",
+    meta: "Workshop",
   },
   {
     src: `${BASE_PATH}/img-gallery/DSC09008.webp`,
-    alt: "SLIOT 20226",
-    title: "Selection Committee",
-    meta: "Fast iterations",
+    alt: "Code Jam By CSEA 2024",
+    title: "Code Jam By CSEA 2024",
+    meta: "Competition",
   },
   {
     src: `${BASE_PATH}/img-gallery/DSC09050.webp`,
-    alt: "SLIOT 20226",
-    title: "Selection Committee",
-    meta: "Fast iterations",
+    alt: "SLIOT Schollo Category Workshop 2026",
+    title: "SLIOT Schollo Category Workshop 2026",
+    meta: "Workshop",
   },
   {
     src: `${BASE_PATH}/img-gallery/FB_IMG_1776678938087.webp`,
@@ -73,93 +78,53 @@ const galleryItems = [
     src: `${BASE_PATH}/img-gallery/IMG-20260401-WA0070.webp`,
     alt: "SLIOT 20226 Semifinals",
     title: "Selection Committee",
-    meta: "Fast iterations",
+    meta: "Selection Committee",
   },
   {
     src: `${BASE_PATH}/img-gallery/FB_IMG_1741144689677.webp`,
-    alt: "New Image",
-    title: "New Image",
-    meta: "Gallery",
+    alt: "RoboGames 2024",
+    title: "Finals ",
+    meta: "Finalist",
   },
   {
     src: `${BASE_PATH}/img-gallery/FB_IMG_1747571468998.webp`,
-    alt: "New Image",
-    title: "New Image",
-    meta: "Gallery",
-  },
-  {
-    src: `${BASE_PATH}/img-gallery/FB_IMG_1776678938087 (1).webp`,
-    alt: "New Image",
-    title: "New Image",
-    meta: "Gallery",
+    alt: "Code Jam By CSE",
+    title: "Code Jam By CSE",
+    meta: "Volunteers",
   },
   {
     src: `${BASE_PATH}/img-gallery/IMG-20260403-WA0014.webp`,
-    alt: "New Image",
-    title: "New Image",
-    meta: "Gallery",
+    alt: "Workshops",
+    title: "Workshops",
+    meta: "School Children Arduino Workshops",
   },
   {
     src: `${BASE_PATH}/img-gallery/IMG-20260403-WA0035.webp`,
-    alt: "New Image",
-    title: "New Image",
-    meta: "Gallery",
+    alt: "Workshops",
+    title: "Workshops",
+    meta: "School Children Arduino Workshops",
   },
   {
     src: `${BASE_PATH}/img-gallery/IMG-20260425-WA0130.webp`,
-    alt: "New Image",
-    title: "New Image",
-    meta: "Gallery",
+    alt: "SLiOT Full OC",
+    title: "SLiOT Full OC Members",
+    meta: "Organization Committee Members",
   },
   {
     src: `${BASE_PATH}/img-gallery/IMG-20260425-WA0172.webp`,
-    alt: "New Image",
-    title: "New Image",
-    meta: "Gallery",
+    alt: "SLiOT Selection Committe 2026 ",
+    title: "Selection Comittee Members",
+    meta: "Selection Comittee Members",
   },
   {
     src: `${BASE_PATH}/img-gallery/IMG-20260425-WA0174.webp`,
-    alt: "New Image",
-    title: "New Image",
-    meta: "Gallery",
+    alt: "SLiOT Selection Committe 2026 ",
+    title: "SLiOT Selection Committe 2026 ",
+    meta: "Selection Committe 2026 Leads",
   }
 ];
 
 export default function AboutMe() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % galleryItems.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide(
-      (prev) => (prev - 1 + galleryItems.length) % galleryItems.length
-    );
-  };
-
-  // Keyboard navigation
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "ArrowLeft") prevSlide();
-      if (e.key === "ArrowRight") nextSlide();
-    };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, []);
-
-  // Autoplay
-  useEffect(() => {
-    if (isPaused) return;
-
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 1500); // Change slide every 3 seconds
-
-    return () => clearInterval(interval);
-  }, [isPaused, currentSlide]);
-
   return (
     <>
       <div className="px-[8%] lg:px-[16%] py-10">
@@ -241,119 +206,94 @@ export default function AboutMe() {
               Image Gallery.
             </h2>
           </div>
-          <div className="flex items-center gap-3">
-            <span className="text-[var(--text-light)] text-sm">
-              {currentSlide + 1} / {galleryItems.length}
-            </span>
-          </div>
         </div>
 
-        <div className="relative">
-          {/* Main slideshow container with coverflow effect */}
-          <div
-            className="relative h-[320px] sm:h-[400px] lg:h-[480px] overflow-hidden"
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
-          >
-            <div className="absolute inset-0 flex items-center justify-center">
-              {galleryItems.map((item, index) => {
-                // Calculate circular offset
-                let offset = index - currentSlide;
-                const total = galleryItems.length;
-
-                // Wrap around for circular effect
-                if (offset > total / 2) offset -= total;
-                if (offset < -total / 2) offset += total;
-
-                const absOffset = Math.abs(offset);
-
-                // Only show slides within 2 positions of current
-                if (absOffset > 2) return null;
-
-                return (
-                  <div
-                    key={item.src}
-                    onClick={() => setCurrentSlide(index)}
-                    className="absolute transition-all duration-500 ease-out cursor-pointer"
-                    style={{
-                      transform: `
-                        translateX(${offset * 320}px) 
-                        translateZ(${-absOffset * 200}px)
-                        rotateY(${offset * -15}deg)
-                        scale(${1 - absOffset * 0.2})
-                      `,
-                      zIndex: 10 - absOffset,
-                      opacity: absOffset === 0 ? 1 : 0.4,
-                      transformStyle: "preserve-3d",
-                    }}
-                  >
-                    <div
-                      className="relative overflow-hidden rounded-xl border transition-all duration-300"
-                      style={{
-                        width: "280px",
-                        height: "280px",
-                        borderColor:
-                          offset === 0
-                            ? "var(--prim-color)"
-                            : "var(--light-border)",
-                        backgroundColor: "var(--bg-color)",
-                        boxShadow:
-                          offset === 0
-                            ? "0 0 20px rgba(0,255,255,0.5)"
-                            : "0 10px 30px rgba(0,0,0,0.3)",
-                      }}
-                    >
-                      <Image
-                        src={item.src}
-                        alt={item.alt}
-                        fill
-                        sizes="280px"
-                        className="object-cover"
-                      />
-
-                      {offset === 0 && (
-                        <>
-                          <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.7)] via-transparent to-transparent" />
-                          <div className="absolute bottom-0 left-0 right-0 p-4">
-                            <p className="font-mono text-white text-lg font-light neon-text">
-                              {item.title}
-                            </p>
-                            <p className="text-[var(--text-light)] text-xs mt-1">
-                              {item.meta}
-                            </p>
-                          </div>
-                        </>
-                      )}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* Navigation buttons */}
-            <button
-              onClick={prevSlide}
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-[var(--bg-color)]/80 border-2 flex items-center justify-center hover:bg-[var(--bg-color)] transition backdrop-blur-sm z-20"
+        <style>{`
+          .limit-slides .swiper-slide {
+            opacity: 0 !important;
+            visibility: hidden;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+          }
+          .limit-slides .swiper-slide.swiper-slide-active,
+          .limit-slides .swiper-slide.swiper-slide-prev,
+          .limit-slides .swiper-slide.swiper-slide-next {
+            opacity: 1 !important;
+            visibility: visible;
+          }
+          .responsive-slide {
+            width: 260px !important;
+            height: 280px !important;
+          }
+          @media (min-width: 768px) {
+            .responsive-slide {
+              width: 400px !important;
+              height: 350px !important;
+            }
+          }
+        `}</style>
+        <Swiper
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={"auto"}
+          coverflowEffect={{
+            rotate: 30,
+            stretch: 0,
+            depth: 150,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          pagination={{ clickable: true }}
+          modules={[EffectCoverflow, Pagination, Autoplay]}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          loop={true}
+          className="w-full py-12 limit-slides !overflow-visible"
+        >
+          {galleryItems.map((item, index) => (
+            <SwiperSlide
+              key={index}
+              className="responsive-slide"
               style={{
-                borderColor: "var(--prim-color)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
               }}
-              aria-label="Previous slide"
             >
-              <i className="bi bi-chevron-left text-[var(--prim-color)] text-xl"></i>
-            </button>
-
-            <button
-              onClick={nextSlide}
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-[var(--bg-color)]/80 border-2 flex items-center justify-center hover:bg-[var(--bg-color)] transition backdrop-blur-sm z-20"
-              style={{
-                borderColor: "var(--prim-color)",
-              }}
-              aria-label="Next slide"
-            >
-              <i className="bi bi-chevron-right text-[var(--prim-color)] text-xl"></i>
-            </button>
-          </div>
-        </div>
+              <div
+                className="relative overflow-hidden rounded-xl group shadow-[0_0_15px_rgba(14,165,234,0.4)] hover:shadow-[0_0_30px_rgba(14,165,234,0.8)] transition-shadow duration-500 w-full h-full"
+                style={{
+                  backgroundColor: "var(--bg-color)",
+                }}
+              >
+                {/* Blurred Background Layer to fill empty space */}
+                <div className="absolute inset-0">
+                  <img
+                    src={item.src}
+                    alt=""
+                    className="w-full h-full object-cover blur-xl opacity-60 scale-110"
+                  />
+                </div>
+                {/* Foreground Image */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    className="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.8)] via-[rgba(0,0,0,0.2)] to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="absolute bottom-0 left-0 right-0 p-5 transform transition-transform duration-300">
+                  <p className="font-mono text-white text-xl font-medium neon-text line-clamp-1">
+                    {item.title}
+                  </p>
+                  <p className="text-gray-300 text-sm mt-1.5 font-light tracking-wide line-clamp-1">
+                    {item.meta}
+                  </p>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </section>
 
       <section className="relative z-10 mt-12 lg:mt-16 px-[8%] lg:px-[16%]  bg-[var(--body-color)] text-[var(--white)]">
