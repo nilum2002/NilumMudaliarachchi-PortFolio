@@ -16,7 +16,7 @@ import Heroelm4 from "@/public/Hero-elm4.svg";
 import UniversityLogo from "@/public/University_of_Moratuwa_logo.png";
 
 const BASE_PATH =
-  process.env.NEXT_PUBLIC_BASE_PATH || "/NilumMudaliarachchi-PortFolio";
+  process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const galleryItems = [
   // {
