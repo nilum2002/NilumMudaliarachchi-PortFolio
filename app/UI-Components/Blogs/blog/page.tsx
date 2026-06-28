@@ -1,47 +1,103 @@
 "use client";
-import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import ArticleData from "@/app/JsonData/Blogs.json";
-import UnderConstruction from "@/public/under-construction.png";
+import { useRouter } from "next/navigation";
+import articles from "@/app/JsonData/Blogs.json";
 
 export default function Articles() {
+  const router = useRouter();
+
   return (
     <>
-      <div className="px-[8%] lg:px-[16%] py-10">
-        <div className="heading border-b border-[var(--light-border) pb-5 px-5 mb-10">
-          <div className="flex">
-            <Link href="/" className="text-[var(--text-light)]">
-              <i className="bi bi-house text-white me-2 px-2 py-1 rounded-full  bg-[var(--prim-color)]"></i>
+      <div className="px-[8%] lg:px-[16%] py-10 min-h-screen">
+        {/* Breadcrumb Navigation */}
+        <div className="heading border-b pb-5 px-5 mb-10" style={{ borderColor: "var(--light-border)" }}>
+          <div className="flex items-center text-sm md:text-base">
+            <Link href="/" className="text-[var(--text-light)] hover:text-white flex items-center transition-colors">
+              <i className="bi bi-house text-white me-2 px-2 py-1 rounded-full bg-[var(--prim-color)]"></i>
               Home
             </Link>
-            <span className="mx-2">
-              <i className="ri-arrow-right-wide-line text-[var(--text-white)]"></i>
+            <span className="mx-2 text-[var(--text-light)]">
+              <i className="ri-arrow-right-wide-line"></i>
             </span>
-            <h2 className="text-[var(--text-light)]">Articles</h2>
+            <h2 className="text-[var(--text-light)] font-mono">Articles</h2>
           </div>
         </div>
-      </div>
 
-      {/* Under Construction Section */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-8 py-20 px-[8%] lg:px-[16%]">
-        <div className="max-w-xs w-full">
-          <Image
-            src={UnderConstruction}
-            alt="Under Construction"
-            width={300}
-            height={300}
-            className="w-full h-auto"
-          />
-        </div>
-        <div className="flex flex-col justify-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-[var(--prim-color)] text-center md:text-left">
-            Under Construction
-          </h2>
-          <p className="text-[var(--text-light)] text-center md:text-left mt-4 max-w-md">
-            This page is currently under construction. Check back soon for
-            exciting articles and content!
+        {/* Page Title & Desc */}
+        <div className="title flex flex-col items-center justify-center text-center mb-16">
+          <h1 className="text-4xl md:text-5xl mb-5 leading-tight font-mono font-bold text-white typing-01">
+            Articles & Insights
+          </h1>
+          <p className="text-lg text-[var(--text-light)] lg:w-[60%] font-mono">
+            Exploring hardware-software integration, deep learning workflows, edge computing optimizations, and autonomous agent engineering.
           </p>
+        </div>
+
+        {/* Articles Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {articles.map((article) => (
+            <div
+              key={article.id}
+              className="group flex flex-col justify-between p-6 rounded-2xl border border-[var(--light-boarder)] bg-[var(--bg-color)] hover:border-[var(--prim-color)] hover:shadow-[0_0_25px_rgba(14,165,234,0.4)] transition-all duration-300 relative overflow-hidden h-[420px]"
+            >
+              {/* Top decorative gradient blur */}
+              <div className="absolute top-0 right-0 w-24 h-24 bg-[var(--prim-color)]/10 rounded-full blur-2xl pointer-events-none group-hover:bg-[var(--prim-color)]/20 transition-all" />
+
+              <div>
+                {/* Meta Info: Date and Read Time */}
+                <div className="flex items-center gap-3 text-xs text-[var(--text-light)] mb-4 font-mono">
+                  <span>{article.date}</span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[var(--prim-color)]" />
+                  <span>{article.readTime}</span>
+                </div>
+
+                {/* Title */}
+                <h3 className="text-xl md:text-2xl font-bold font-mono text-white mb-3 group-hover:text-[var(--prim-color)] transition-colors line-clamp-2">
+                  {article.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-[var(--text-light)] text-sm leading-relaxed mb-4 line-clamp-3 font-mono">
+                  {article.desc}
+                </p>
+
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {article.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-xs px-2.5 py-0.5 rounded-full bg-[var(--prim-color)]/10 border border-[var(--prim-color)]/30 text-white font-mono"
+                    >
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Bottom Actions */}
+              <div className="flex items-center justify-between mt-auto pt-4 border-t border-[var(--light-boarder)]">
+                {/* Internal Full Article Navigation */}
+                <Link
+                  href={`/UI-Components/Blogs/blog/${article.id}`}
+                  className="inline-flex items-center text-sm font-semibold text-[var(--prim-color)] hover:text-white transition-colors duration-300 gap-1.5"
+                >
+                  Read Article <i className="bi bi-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </Link>
+
+                {/* External Medium Link */}
+                <a
+                  href={article.mediumLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/5 border border-[var(--light-boarder)] text-white hover:bg-white hover:text-black hover:border-transparent transition-all duration-300"
+                  title="Read on Medium"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <i className="bi bi-medium text-lg"></i>
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </>

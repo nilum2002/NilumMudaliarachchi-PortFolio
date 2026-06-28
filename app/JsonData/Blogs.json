@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "title": "Building a Low-Resource Multitasking Robot: A Deep Dive into Embedded Systems",
+    "desc": "Exploring modular firmware design and power optimization on STM32 for multi-tasking competitive robotics.",
+    "date": "May 15, 2026",
+    "readTime": "6 min read",
+    "mediumLink": "https://medium.com/@sachithyanilum/building-a-low-resource-multitasking-robot-a-deep-dive-into-embedded-systems-123456",
+    "content": "Designing robots for competitive scenarios like IESL Robogames requires squeezing every ounce of performance from microcontrollers. In this deep dive, we explore how to implement structured multi-tasking loops on STM32/ESP32 platforms without a heavy RTOS. We'll look at non-blocking time delays, sensor polling registers, and motor driver control loops using hardware interrupts. Additionally, we analyze SPI/I2C communication protocols to coordinate sub-systems efficiently while maintaining a strict real-time loop budget under 2ms.",
+    "tags": ["Robotics", "Embedded Systems", "STM32"]
+  },
+  {
+    "id": "2",
+    "title": "Agentic AI in Action: Developing an Automated Restaurant Feedback Agent",
+    "desc": "Utilizing LangChain, LangGraph, and Gemini to build autonomous feedback processing pipelines that analyze customer sentiment.",
+    "date": "June 10, 2026",
+    "readTime": "8 min read",
+    "mediumLink": "https://medium.com/@sachithyanilum/agentic-ai-in-action-developing-an-automated-restaurant-feedback-agent-567890",
+    "content": "AI agents are transforming how businesses handle unstructured customer feedback. By chaining LangChain with LangGraph, we can design cyclic workflows that act on incoming critiques. This article outlines the architecture of an agentic pipeline: ingestion of raw text, multi-aspect sentiment extraction via Gemini, automatic routing to specific kitchen or support teams, and generating context-aware draft responses. We also cover prompt engineering strategies to prevent hallucination in restaurant action plans.",
+    "tags": ["AI", "LangChain", "Agentic AI"]
+  },
+  {
+    "id": "3",
+    "title": "Computer Vision on the Edge: Cube Detection for Kuboki Qbot2",
+    "desc": "Real-time object detection and spatial mapping using OpenCV, YOLOv8, and ROS in constrained robotic environments.",
+    "date": "June 22, 2026",
+    "readTime": "7 min read",
+    "mediumLink": "https://medium.com/@sachithyanilum/computer-vision-on-the-edge-cube-detection-for-kuboki-qbot2-abcde",
+    "content": "Autonomous navigation and object manipulation on a Kuboki Qbot2 mobile robot requires robust computer vision. This article details our implementation of edge detection and YOLOv8 inference running on a Raspberry Pi 4. We cover camera calibration using checkerboards, 2D-to-3D coordinate transformation using camera intrinsic matrices, and publishing object coordinates as ROS transform frames (TF). Finally, we present optimizations for achieving 15+ FPS inference speeds on edge CPU hardware.",
+    "tags": ["Computer Vision", "ROS", "YOLOv8"]
+  }
+]
