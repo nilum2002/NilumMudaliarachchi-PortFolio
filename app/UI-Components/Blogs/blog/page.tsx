@@ -29,7 +29,7 @@ export default function Articles() {
             Articles & Insights
           </h1>
           <p className="text-lg text-[var(--text-light)] lg:w-[60%] font-mono">
-            Exploring hardware-software integration, deep learning workflows, edge computing optimizations, and autonomous agent engineering.
+            Here are My interest topics ... 
           </p>
         </div>
 
