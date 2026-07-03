@@ -35,11 +35,11 @@ function renderContent(content: string) {
       if (match) {
         const level = match[1].length;
         const text = match[2];
-        if (level === 1) return <h1 key={idx} className="text-3xl font-bold my-6 text-white font-geist-sans tracking-tight">{text}</h1>;
-        if (level === 2) return <h2 key={idx} className="text-2xl font-bold my-5 text-white font-geist-sans tracking-tight">{text}</h2>;
-        if (level === 3) return <h3 key={idx} className="text-xl font-bold my-4 text-white font-geist-sans tracking-tight">{text}</h3>;
-        if (level === 4) return <h4 key={idx} className="text-lg font-bold my-4 text-white font-geist-sans tracking-tight">{text}</h4>;
-        return <h5 key={idx} className="text-base font-bold my-4 text-white font-geist-sans tracking-tight">{text}</h5>;
+        if (level === 1) return <h1 key={idx} className="text-3xl font-bold my-6 text-[var(--white)] font-geist-sans tracking-tight">{text}</h1>;
+        if (level === 2) return <h2 key={idx} className="text-2xl font-bold my-5 text-[var(--white)] font-geist-sans tracking-tight">{text}</h2>;
+        if (level === 3) return <h3 key={idx} className="text-xl font-bold my-4 text-[var(--white)] font-geist-sans tracking-tight">{text}</h3>;
+        if (level === 4) return <h4 key={idx} className="text-lg font-bold my-4 text-[var(--white)] font-geist-sans tracking-tight">{text}</h4>;
+        return <h5 key={idx} className="text-base font-bold my-4 text-[var(--white)] font-geist-sans tracking-tight">{text}</h5>;
       }
     }
     
@@ -47,7 +47,7 @@ function renderContent(content: string) {
     if (trimmed.startsWith('>')) {
       const text = trimmed.replace(/^>\s*/, '').replace(/\n>\s*/g, '\n');
       return (
-        <blockquote key={idx} className="border-l-4 border-[var(--prim-color)] pl-5 py-3 italic my-6 bg-white/5 p-4 rounded-r-xl border-y border-r border-[var(--light-boarder)] text-gray-200 font-geom text-base">
+        <blockquote key={idx} className="border-l-4 border-[var(--prim-color)] pl-5 py-3 italic my-6 bg-[var(--white)]/5 p-4 rounded-r-xl border-y border-r border-[var(--light-boarder)] text-[var(--text-light)] font-geom text-base">
           {text}
         </blockquote>
       );
@@ -131,14 +131,14 @@ export default async function ArticleDetails({ params }: PageProps) {
         {/* Breadcrumb Navigation */}
         <div className="heading border-b pb-5 px-5 mb-10" style={{ borderColor: "var(--light-border)" }}>
           <div className="flex items-center text-sm md:text-base font-geist-sans">
-            <Link href="/" className="text-[var(--text-light)] hover:text-white flex items-center transition-colors">
+            <Link href="/" className="text-[var(--text-light)] hover:text-[var(--white)] flex items-center transition-colors">
               <i className="bi bi-house text-white me-2 px-2 py-1 rounded-full bg-[var(--prim-color)]"></i>
               Home
             </Link>
             <span className="mx-2 text-[var(--text-light)]">
               <i className="ri-arrow-right-wide-line"></i>
             </span>
-            <Link href="/UI-Components/Blogs/blog" className="text-[var(--text-light)] hover:text-white transition-colors">
+            <Link href="/UI-Components/Blogs/blog" className="text-[var(--text-light)] hover:text-[var(--white)] transition-colors">
               Articles
             </Link>
             <span className="mx-2 text-[var(--text-light)]">
@@ -160,7 +160,7 @@ export default async function ArticleDetails({ params }: PageProps) {
           </div>
 
           {/* Article Title */}
-          <h1 className="text-3xl md:text-5xl font-extrabold font-geist-sans text-white mb-6 leading-tight tracking-tight">
+          <h1 className="text-3xl md:text-5xl font-extrabold font-geist-sans text-[var(--white)] mb-6 leading-tight tracking-tight">
             {article.title}
           </h1>
 
@@ -178,7 +178,7 @@ export default async function ArticleDetails({ params }: PageProps) {
 
           {/* Article Body */}
           <article className="max-w-none space-y-8">
-            <p className="text-lg md:text-xl text-white font-medium italic border-l-4 border-[var(--prim-color)] pl-5 py-4 mb-8 bg-[var(--bg-color)]/50 p-4 rounded-r-xl border-y border-r border-[var(--light-boarder)] font-geom">
+            <p className="text-lg md:text-xl text-[var(--white)] font-medium italic border-l-4 border-[var(--prim-color)] pl-5 py-4 mb-8 bg-[var(--bg-color)]/50 p-4 rounded-r-xl border-y border-r border-[var(--light-boarder)] font-geom">
               {article.desc}
             </p>
             <div className="bg-[var(--bg-color)] p-6 md:p-10 rounded-2xl border border-[var(--light-boarder)] space-y-6">
@@ -190,7 +190,7 @@ export default async function ArticleDetails({ params }: PageProps) {
           <div className="mt-16 pt-8 border-t border-[var(--light-boarder)] flex flex-col md:flex-row items-center justify-between gap-6">
             <Link
               href="/UI-Components/Blogs/blog"
-              className="flex items-center text-[var(--prim-color)] hover:text-white transition-colors duration-300 gap-2 font-geist-sans text-sm font-semibold cursor-pointer"
+              className="flex items-center text-[var(--prim-color)] hover:text-[var(--white)] transition-colors duration-300 gap-2 font-geist-sans text-sm font-semibold cursor-pointer"
             >
               <i className="bi bi-arrow-left"></i> Back to Articles
             </Link>
@@ -199,7 +199,7 @@ export default async function ArticleDetails({ params }: PageProps) {
               href={article.mediumLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white/5 border border-[var(--light-boarder)] text-white hover:bg-white hover:text-black hover:border-transparent transition-all duration-300 font-geist-sans text-sm"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[var(--white)]/5 border border-[var(--light-boarder)] text-[var(--white)] hover:bg-[var(--white)] hover:text-[var(--black)] hover:border-transparent transition-all duration-300 font-geist-sans text-sm"
             >
               <i className="bi bi-medium text-lg"></i> Read on Medium
             </a>

@@ -121,23 +121,45 @@ export default function Navbar() {
           </nav>
           {/*right section*/}
           <div className="flex items-center gap-4 lg:shrink-0">
-            <div
+            <button
               onClick={toggleTheme}
-              className="mode flex items-center justify-center cursor-pointer w-10 h-10 bg-[var(--text-light)] rounded-full relative overflow-hidden"
+              className={`relative flex items-center justify-between w-14 h-7 p-1 rounded-full cursor-pointer transition-all duration-300 focus:outline-none border border-[var(--prim-color)] shadow-[0_0_8px_rgba(14,165,234,0.45)] ${
+                darkMod
+                  ? "bg-[#0b0f19]"
+                  : "bg-slate-100"
+              }`}
+              aria-label="Toggle theme"
             >
-              <i
-                className={`bi bi-brightness-high-fill text-white text-xl absolute transition-all duration-700 ease-in-out ${darkMod ? "scale-0 opacity-0" : "scale-100 opacity-100"
-                  }`}
-              ></i>
-              <i
-                className={`bi bi-moon-stars-fill text-xl absolute transition-all duration-700 ease-in-out ${darkMod ? "scale-100 opacity-100" : "scale-0 opacity-0"
-                  }`}
-              ></i>
-            </div>
-            <Link href="https://github.com/nilum2002">
-              <button className="btn nav-btn text-white font-medium px-4 py-2 rounded-md hover:opacity-90 transition">
-                Git-Hub
-              </button>
+              {/* Sun/Moon icons on background track */}
+              <i className="bi bi-brightness-high-fill text-[11px] text-amber-500/70 pl-1 z-0"></i>
+              <i className="bi bi-moon-stars-fill text-[11px] text-indigo-400/70 pr-1 z-0"></i>
+
+              {/* Sliding Thumb */}
+              <div
+                className={`absolute w-5 h-5 rounded-full flex items-center justify-center transition-all duration-300 shadow-md ${
+                  darkMod
+                    ? "left-[32px] bg-slate-900 border border-indigo-400 text-indigo-400"
+                    : "left-[4px] bg-white border border-amber-400 text-amber-500"
+                }`}
+              >
+                <i
+                  className={`bi ${
+                    darkMod ? "bi-moon-stars-fill" : "bi-brightness-high-fill"
+                  } text-[10px]`}
+                ></i>
+              </div>
+            </button>
+            <Link
+              href="https://github.com/nilum2002"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <img
+                src={darkMod ? "/github-mark-white.png" : "/github-mark.svg"}
+                alt="GitHub"
+                className="w-7 h-7 object-contain hover:scale-110 transition-transform duration-200"
+              />
             </Link>
             <button
               onClick={() => setmobileMenuOpen(!mobileMenuOpen)}
