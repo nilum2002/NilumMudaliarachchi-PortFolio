@@ -12,7 +12,7 @@ export default function Articles() {
         {/* Breadcrumb Navigation */}
         <div className="heading border-b pb-5 px-5 mb-10" style={{ borderColor: "var(--light-border)" }}>
           <div className="flex items-center text-sm md:text-base">
-            <Link href="/" className="text-[var(--text-light)] hover:text-white flex items-center transition-colors">
+            <Link href="/" className="text-[var(--text-light)] hover:text-[var(--white)] flex items-center transition-colors">
               <i className="bi bi-house text-white me-2 px-2 py-1 rounded-full bg-[var(--prim-color)]"></i>
               Home
             </Link>
@@ -25,7 +25,7 @@ export default function Articles() {
 
         {/* Page Title & Desc */}
         <div className="title flex flex-col items-center justify-center text-center mb-16">
-          <h1 className="text-4xl md:text-5xl mb-5 leading-tight font-mono font-bold text-white typing-01">
+          <h1 className="text-4xl md:text-5xl mb-5 leading-tight font-mono font-bold text-[var(--white)] typing-01">
             Articles & Insights
           </h1>
           <p className="text-lg text-[var(--text-light)] lg:w-[60%] font-mono">
@@ -52,7 +52,7 @@ export default function Articles() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl md:text-2xl font-bold font-mono text-white mb-3 group-hover:text-[var(--prim-color)] transition-colors line-clamp-2">
+                <h3 className="text-xl md:text-2xl font-bold font-mono text-[var(--white)] mb-3 group-hover:text-[var(--prim-color)] transition-colors line-clamp-2">
                   {article.title}
                 </h3>
 
@@ -66,7 +66,7 @@ export default function Articles() {
                   {article.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs px-2.5 py-0.5 rounded-full bg-[var(--prim-color)]/10 border border-[var(--prim-color)]/30 text-white font-mono"
+                      className="text-xs px-2.5 py-0.5 rounded-full bg-[var(--prim-color)]/10 border border-[var(--prim-color)]/30 text-[var(--white)] font-mono"
                     >
                       #{tag}
                     </span>
@@ -79,7 +79,7 @@ export default function Articles() {
                 {/* Internal Full Article Navigation */}
                 <Link
                   href={`/UI-Components/Blogs/blog/${article.id}`}
-                  className="inline-flex items-center text-sm font-semibold text-[var(--prim-color)] hover:text-white transition-colors duration-300 gap-1.5"
+                  className="inline-flex items-center text-sm font-semibold text-[var(--prim-color)] hover:text-[var(--white)] transition-colors duration-300 gap-1.5"
                 >
                   Read Article <i className="bi bi-arrow-right group-hover:translate-x-1 transition-transform"></i>
                 </Link>
@@ -89,7 +89,7 @@ export default function Articles() {
                   href={article.mediumLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/5 border border-[var(--light-boarder)] text-white hover:bg-white hover:text-black hover:border-transparent transition-all duration-300"
+                  className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[var(--white)]/5 border border-[var(--light-boarder)] text-[var(--white)] hover:bg-[var(--white)] hover:text-[var(--black)] hover:border-transparent transition-all duration-300"
                   title="Read on Medium"
                   onClick={(e) => e.stopPropagation()}
                 >

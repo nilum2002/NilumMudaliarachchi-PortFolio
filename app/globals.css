@@ -116,7 +116,10 @@ body{
   position: relative;
 }
 .hero-header{
-  height: 100vh;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding-bottom: 2rem;
 }
 .hero::after{
   content: "";
@@ -245,9 +248,7 @@ body{
 .swiper-btn i{
   color: var(--white);
 }
-.hero-swiper-next{
-  left:30% !important;
-}
+
 
 .typing {
   display: inline-block;
@@ -279,13 +280,6 @@ body{
   .hero-swiper{
     height: 5%;
   }
-  .hero-swiper-next,
-  .hero-swiper-prev{
-    top:160% !important;
-  }
-  .hero-swiper-next{
-    left: 10% !important;
-  }
 
 }
 
@@ -296,13 +290,6 @@ body{
   }
   .hero::after{
     width: 500px;
-  }
-  .hero-swiper-next,
-  .hero-swiper-prev{
-    top:140% !important;
-  }
-  .hero-swiper-next{
-    left: 15% !important;
   }
 }
 
@@ -372,8 +359,26 @@ body{
     inset 0 0 8px rgba(14,165,234,0.22);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  color: var(--black);
+  color: var(--white);
 }
+
+/* Light mode overrides for neon theme components */
+html.light .neon-card {
+  background: linear-gradient(135deg, rgba(232, 237, 241, 0.85), rgba(255, 255, 255, 0.75));
+  border: 1px solid rgba(14, 165, 234, 0.5);
+  box-shadow:
+    0 0 16px rgba(14, 165, 234, 0.15),
+    inset 0 0 18px rgba(14, 165, 234, 0.05);
+}
+
+html.light .neon-card::before {
+  background: radial-gradient(140px 60px at left bottom, rgba(14, 165, 234, 0.25), transparent 60%);
+}
+
+html.light .neon-text {
+  text-shadow: none;
+}
+
 
 .tag-card{
   transition: var(--transition-regular);

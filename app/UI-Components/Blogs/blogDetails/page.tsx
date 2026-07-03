@@ -17,7 +17,7 @@ export default function ArticleDetails() {
               Home
             </Link>
             <span className="mx-2">
-              <i className="ri-arrow-right-wide-line text-[var(--text-white)]"></i>
+              <i className="ri-arrow-right-wide-line text-[var(--text-light)]"></i>
             </span>
             <h2 className="text-[var(--text-light)]">Article Details </h2>
           </div>

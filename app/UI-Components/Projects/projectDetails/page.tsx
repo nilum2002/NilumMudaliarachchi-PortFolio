@@ -15,7 +15,7 @@ export default function projectDetails() {
               Home
             </Link>
             <span className="mx-2">
-              <i className="ri-arrow-right-wide-line text-[var(--text-white)]"></i>
+              <i className="ri-arrow-right-wide-line text-[var(--text-light)]"></i>
             </span>
             <h2 className="text-[var(--text-light)]">Articles</h2>
           </div>

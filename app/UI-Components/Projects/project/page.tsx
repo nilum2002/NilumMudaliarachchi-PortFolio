@@ -37,14 +37,14 @@ export default function Projects() {
   return (
     <>
       <div className="px-[8%] lg:px-[16%] py-10">
-        <div className="heading border-b border-[var(--light-border) pb-5 px-5 mb-10">
+        <div className="heading border-b border-[var(--light-border)] pb-5 px-5 mb-10">
           <div className="flex">
             <Link href="/" className="text-[var(--text-light)]">
               <i className="bi bi-house text-white me-2 px-2 py-1 rounded-full  bg-[var(--prim-color)]"></i>
               Home
             </Link>
             <span className="mx-2">
-              <i className="ri-arrow-right-wide-line text-[var(--text-white)]"></i>
+              <i className="ri-arrow-right-wide-line text-[var(--text-light)]"></i>
             </span>
             <h2 className="text-[var(--text-light)]">Projects</h2>
           </div>
@@ -65,8 +65,8 @@ export default function Projects() {
               onClick={() => setActiveTab(tab.id)}
               className={`px-5 py-2 rounded-full transition-all duration-300 ${
                 activeTab === tab.id
-                  ? "bg-[var(--prim-color)] text-[var(--text-white)] font-semibold"
-                  : "border-2 text-[var(--text-white)] border-[var(--prim-color)] hover:bg-[var(--prim-color)] hover:border-transparent cursor-pointer hover:text-white"
+                  ? "bg-[var(--prim-color)] text-white font-semibold"
+                  : "border-2 text-[var(--white)] border-[var(--prim-color)] hover:bg-[var(--prim-color)] hover:border-transparent cursor-pointer hover:text-white"
               }`}
             >
               {tab.label}

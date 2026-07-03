@@ -87,7 +87,7 @@ export default function Achievements() {
                     className="w-full h-full object-cover"
                   />
                   <div className="hot-topic-info absolute bottom-2 left-2 neon-card">
-                    <h2 className="font-mono text-white font-light neon-text text-sm">
+                    <h2 className="font-mono text-[var(--white)] font-light neon-text text-sm">
                       {achievement.title}
                     </h2>
                     <p className="font-bold neon-badge mt-1 text-xs">
