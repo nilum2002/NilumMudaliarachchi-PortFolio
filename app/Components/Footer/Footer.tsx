@@ -40,7 +40,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/#projects"
+                    href="/UI-Components/Projects/project"
                     className="hover:text-[var(--prim-color)] transition-colors duration-300"
                   >
                     Projects
@@ -48,7 +48,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/articles"
+                    href="/UI-Components/Blogs/blog"
                     className="hover:text-[var(--prim-color)] transition-colors duration-300"
                   >
                     Articles
@@ -56,7 +56,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/about"
+                    href="/UI-Components/pages/About"
                     className="hover:text-[var(--prim-color)] transition-colors duration-300"
                   >
                     About
@@ -64,7 +64,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/contact"
+                    href="/UI-Components/pages/Contact"
                     className="hover:text-[var(--prim-color)] transition-colors duration-300"
                   >
                     Contact

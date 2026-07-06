@@ -11,17 +11,7 @@ type NavLink = {
 
 const navLinks: NavLink[] = [
   { label: "Home", href: "/#hero" },
-  {
-    label: "Projects",
-    href: "/UI-Components/Projects/project",
-    dropdown: [
-      { label: "My Projects", href: "/UI-Components/Projects/project" },
-      {
-        label: "Projects Details",
-        href: "/UI-Components/Projects/projectDetails",
-      },
-    ],
-  },
+  { label: "Projects", href: "/UI-Components/Projects/project" },
   { label: "Articles", href: "/UI-Components/Blogs/blog" },
   { label: "About", href: "/UI-Components/pages/About" },
   { label: "Contact", href: "/UI-Components/pages/Contact" },
