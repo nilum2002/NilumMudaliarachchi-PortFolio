@@ -46,5 +46,21 @@
         "desc_short" : "Implementation of a Custom Operating System",
         "desc_long" : "A custom operating system implementation based on Stanford's Pintos instructional OS. Developed thread scheduling (priority scheduling, priority donation), user programs execution (system calls like fork, exec, read, write), and virtual memory management (paging, swapping, stack growth) in C.",
         "git-hub-link": "https://github.com/nilum2002/PintOS"
+    }, 
+    {
+        "id" : "7",
+        "img": "/project-gallery/qbot2.webp",
+        "title" : "An Autonomous Object Detection, Collection & Placement Robot",
+        "desc_short" : "An autonomous object Robot implementation in Controlled environment",
+        "desc_long" : "An autonomous object detection, collection & placement robot using object detection and color detection",
+        "git-hub-link": "https://github.com/IntellisenseLab/final-project-botzilla"
+    }, 
+    {
+        "id" : "8",
+        "img": "/project-gallery/finetune.webp",
+        "title" : "FineTine LLM's",
+        "desc_short" : "Beginer Friendly guid to LLM Fine-Tuning",
+        "desc_long" : "A comprehensive, hands-on guide to fine-tuning large language models using Google Colab and Jupyter Notebooks.",
+        "git-hub-link": "https://github.com/nilum2002/Fine-Tune-LLMs-"
     }
 ]
