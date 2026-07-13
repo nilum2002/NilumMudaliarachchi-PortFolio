@@ -3,30 +3,48 @@
         "id" : "1",
         "img": "/RecentProject01.webp",
         "title" : "AI Feedback Agent",
-        "desc" : "Automated Restaurant Feedback Agent using LangChain.",
+        "desc_short" : "Automated Restaurant Feedback Agent using LangChain.",
+        "desc_long" : "An autonomous AI agent developed with LangChain and Google's Gemini API to collect, process, and analyze restaurant customer feedback in real-time. The system automatically categorizes sentiments, generates detailed reports, and drafts personalized follow-up responses to address customer concerns dynamically.",
         "git-hub-link": "https://github.com/nilum2002/Automated-Restaurant-Feedback-Agent-SteamNoodles"
     },
-
     {
         "id" : "2",
-        "img": "/RecentProject02.webp",
+        "img": "/project-gallery/cv_cube_detection.webp",
         "title" : "CV Cube Detection",
-        "desc" : "Computer Vision Based Object Detection For Kuboki Qbot2",
-        "git-hub-link": "https://github.com/Team-Botzilla/Final"
+        "desc_short" : "Computer Vision Based Object Detection For Kuboki Qbot2",
+        "desc_long" : "A sophisticated real-time computer vision system built for the Kuboki Qbot2 robotic platform. Utilizing OpenCV and depth sensing, the robot detects, tracks, and localizes colored cubes, enabling autonomous navigation, path planning, and obstacle avoidance tasks in structured environments.",
+        "git-hub-link": "https://github.com/nilum2002/Cube-Dataset-final-project"
     },
     {
         "id" : "3",
-        "img": "/RecentProject03.webp",
-        "title" : "Multitasking Robot with low resources",
-        "desc" : "A multi-tasking robot for a competition",
+        "img": "/project-gallery/robot.webp",
+        "title" : "Task Specified Robot with low resources",
+        "desc_short" : "Robot for a competition",
+        "desc_long" : "A high-performance, resource-constrained multitasking robot powered by ESP32 and Arduino firmware. Designed for competitive robotics, the robot dynamically switches between line-following, maze solving, and precise object manipulation using efficient hardware-level interrupts and multitasking algorithms.",
         "git-hub-link": "https://github.com/nilum2002/XbotiXRuhuna-GenXis-Academy"
     },
     {
         "id" : "4",
         "img": "/RecentProject04.webp",
         "title" : "EduQuest",
-        "desc" : "Online exam platform",
+        "desc_short" : "Online exam platform",
+        "desc_long" : "A comprehensive online examination and learning management system designed to host exams, track student performance, and automate grading. The platform features robust security checks, randomized question banks, real-time telemetry, and detailed visual analytics for educators.",
         "git-hub-link": "https://github.com/GenXisLabs/EduQuest"
+    },
+    {
+        "id" : "5",
+        "img": "/project-gallery/FPGA.webp",
+        "title" : "Nano-processor Design",
+        "desc_short" : "4-bit Nano-processor design and implementation.",
+        "desc_long" : "A 4-bit nano-processor designed and simulated using VHDL. The processor features a custom instruction set, register file, ALU, program counter, and control unit, fully implemented and tested on a Xilinx FPGA board with custom assembly programs.",
+        "git-hub-link": "https://github.com/nilum2002/Nano_processor_4_bit"
+    }, 
+    {
+        "id" : "6",
+        "img": "/project-gallery/PintOS.webp",
+        "title" : "Pintos",
+        "desc_short" : "Implementation of a Custom Operating System",
+        "desc_long" : "A custom operating system implementation based on Stanford's Pintos instructional OS. Developed thread scheduling (priority scheduling, priority donation), user programs execution (system calls like fork, exec, read, write), and virtual memory management (paging, swapping, stack growth) in C.",
+        "git-hub-link": "https://github.com/nilum2002/PintOS"
     }
-   
 ]
