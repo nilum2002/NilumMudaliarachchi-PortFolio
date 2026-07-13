@@ -169,6 +169,7 @@ export default function AboutMe() {
                 width={450}
                 height={600}
                 className="w-full h-auto"
+                style={{ height: "auto" }}
               />
               <Image
                 src={Heroelm1}

@@ -41,6 +41,7 @@ export default function Hero() {
                 width={450}
                 height={600}
                 priority={true}
+                style={{ height: "auto" }}
               />
               <Image
                 src={Heroelm1}

@@ -116,6 +116,16 @@ export default async function ProjectDetails({ params }: PageProps) {
                         #Software Engineering
                       </span>
                     ) : null}
+                    {project.title.toLowerCase().includes("processor") || project.title.toLowerCase().includes("fpga") ? (
+                      <span className="text-xs px-3 py-1 rounded-full bg-[var(--prim-color)]/10 border border-[var(--prim-color)]/30 text-[var(--prim-color)] font-geist-sans font-semibold">
+                        #Hardware Design
+                      </span>
+                    ) : null}
+                    {project.title.toLowerCase().includes("pintos") || project.title.toLowerCase().includes("os") ? (
+                      <span className="text-xs px-3 py-1 rounded-full bg-[var(--prim-color)]/10 border border-[var(--prim-color)]/30 text-[var(--prim-color)] font-geist-sans font-semibold">
+                        #Operating Systems
+                      </span>
+                    ) : null}
                   </div>
 
                   <h1 className="text-3xl md:text-4xl font-extrabold font-geist-sans text-[var(--white)] mb-5 leading-tight tracking-tight drop-shadow-[0_0_15px_rgba(14,165,234,0.4)]">
@@ -127,22 +137,13 @@ export default async function ProjectDetails({ params }: PageProps) {
                       Project Description
                     </h3>
                     <p className="text-[var(--text-light)] text-[15px] font-geom font-light leading-relaxed mb-6">
-                      {project.desc}
+                      {project.desc_long}
                     </p>
                   </div>
                 </div>
 
                 {/* GitHub details if available */}
-                {project["git-hub-link"] && (
-                  <div className="bg-white/5 border border-white/10 rounded-2xl p-5 mb-6">
-                    <h4 className="text-sm font-semibold text-[var(--white)] font-geist-sans mb-2 flex items-center">
-                      <i className="bi bi-git mr-2 text-[var(--prim-color)]"></i> Repository Info
-                    </h4>
-                    <p className="text-xs text-[var(--text-light)] font-mono truncate">
-                      {project["git-hub-link"]}
-                    </p>
-                  </div>
-                )}
+                
 
                 {/* Bottom Actions */}
                 <div className="pt-6 border-t border-[var(--light-border)] flex flex-col sm:flex-row items-center justify-between gap-4 mt-auto">

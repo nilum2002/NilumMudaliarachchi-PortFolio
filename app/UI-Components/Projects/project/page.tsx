@@ -14,6 +14,10 @@ const getProjectTags = (id: string) => {
       return ["robotics", "embedded-systems", "iot"];
     case "4":
       return ["web-development", "react", "testing"];
+    case "5":
+      return ["fpga", "nano-processor", "vhdl"];
+    case "6":
+      return ["os", "pintos", "systems-programming"];
     default:
       return ["general"];
   }
@@ -29,6 +33,10 @@ const getProjectCategory = (id: string) => {
       return "Robotics";
     case "4":
       return "Software Eng";
+    case "5":
+      return "Hardware Design";
+    case "6":
+      return "Operating Systems";
     default:
       return "General";
   }
@@ -103,7 +111,7 @@ export default function Projects() {
 
                     {/* Description */}
                     <p className="text-[var(--text-light)] text-xs leading-relaxed mb-3 line-clamp-2 font-mono">
-                      {project.desc}
+                      {project.desc_short}
                     </p>
                   </div>
 
